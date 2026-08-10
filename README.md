@@ -5,7 +5,7 @@ The sole audios provision that aims to exist as a universal tagging automaton, b
 Built on a foundation of OS independence but birthed for the mac; both quality and assurance has been aborted for non Darwin operating systems.  
 While it is possible to modify tags on single files (with the proper regular expressions and action choices) this was meant to tag full albums.
 
-## go build -o audiostag cmd/main.go
+## go build -o audiostag ./cmd/...
 You can name it whatever you want, but if consistency is important you'll also need to code out the annoying little dependencies that I've neglected to account for.
 
 This can be used as a command line interface but it's use was always predicated on being a right-click action
@@ -94,7 +94,7 @@ Upon first use you will have allow audiostag to run in Privacy settings where I 
 ```
 {
   "cli": {
-    "starting_directory": "/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles"
+    "starting_directory": "!/audios/audiostag/audiofiles"
   },
   "archive": {
     "exclude_file_regex": "\\.(nfo|sfv|m3u)$|.*proof.*\\.(jpg|png)", // do not extract these files from archives
@@ -145,7 +145,9 @@ Upon first use you will have allow audiostag to run in Privacy settings where I 
 # audiostag actions
 - Album Folder (album-folder-name)
    - use this "folder name" to name the album folder (i.e. directory immediately enclosing album)
-- Cover Album (--cover-album_
+<img width="1183" height="464" alt="image" src="https://github.com/user-attachments/assets/1e4b5c92-a0b6-44b2-89d3-91c149335e03" />
+
+- Cover Album (--cover-album)
    - search musicbrainz with this album name (instead of whats in the album tag)
 - Cover Artist (--cover-artist)
    - search musicbrainz with this artist name (instead of whats in the artist tag)
@@ -154,6 +156,8 @@ Upon first use you will have allow audiostag to run in Privacy settings where I 
 - Exclude File (--extract-exclude)
    - do not extract this file or file(s) matching this regular expression
       - characters in the regular expression that match regular expression characters need to be escaped e.g. ".*\.jpg"
+<img width="1066" height="81" alt="image" src="https://github.com/user-attachments/assets/8e266f10-14a2-45a4-87b8-b91739c70688" />
+
 - Keep Tag (--keep-tag)
    - leave this tag in the file because audiostag automatically removes non-required tags 
 - Playlist Name (--playlist-name)
@@ -162,55 +166,116 @@ Upon first use you will have allow audiostag to run in Privacy settings where I 
    - at the beginning of the process, if the "source tag" matches this "regex", set the "destination tag" to the "match value" otherwise set it to the "else value"
    - the Album tag can be set here
    - hides the only non-intuitive/secret expression in audiostag
-      - 
+<img width="1193" height="82" alt="image" src="https://github.com/user-attachments/assets/a0e4dc8f-858c-48d5-998d-f476a37a35d2" />
+
 - Prereplace
    - at the beginning of the process, if the "tag" matches the "regex" set it to the "replace value"
-   - the Album tag can be set here 
+   - the Album tag can be set here
+<img width="1195" height="85" alt="image" src="https://github.com/user-attachments/assets/0bf0a83e-cb99-4151-abdc-d7c6ef076e1b" /> 
+   
 - Single Artist (--single-artist)
    - treat this album as a single artist album (i.e. if audiostag has incorrectly determined that the album is a "Various Artist" album, correct it)
 - Tag (--tag)
-   - set the "source tag" to TRCK and provide a range (e.g. 1-10) and set the "destination tag" to the "match value" else "else value"
-      - helpful despite being tedious to set the disc number
+   - set the "source tag" to TRCK and provide a range (e.g. 1-10) and set the "destination tag" to the "match value" else "else value" (helpful to set the disc number; despite an inherent underlying quality of annoyance)
+   - You can also use this to set the cover art (i.e. Picture frame) (musicbrainz doesn't always work out)
+      - set tag to Picture by clicking on a Picture/APIC cell
+      - set value to a link that points to a picture (.jpg, .png, .gif) or a local image file of the same types
+<img width="1193" height="83" alt="image" src="https://github.com/user-attachments/assets/2d3b3fe0-4b24-4c1a-8771-1502e01921cf" />
+            
 - Various Artists (--various)
    - treat this album as a "Various Artists" album (i.e. if audiostag has incorrectly determined that the album is a "Single Artist" album, correct it)
 
 
 # audiostag CLI flags
-- --precondition
-- --prereplace
-- --replace|-r
-- --tag|-t
-- --keep-tag|-k
+- --precondition "source tag=regex=destination tag=expression to place in matching tags=expression to place in all other tags~Source Tag2..."
+   - --precondition "Track Number=1-10=Disc Number=1/2=2/2"
+   - also see audiostag options for Precondition
+- --prereplace "tag=regex=replace value~tag2=regex2=replace value2~..."
+   - --prereplace "TALB= \(Deluxe Edition\)=" (you can also use the tag name "Album")
+   - also see audiostag options for Prereplace
+- --replace|-r "tag=regexp=replacement value~tag2=regexp2=replacement value2~..."
+   - -r "Title= \(Deluxe [^)]*\)="
+   - also see audiostag options for Replace
+- --tag|-t "tag=tag value~tag2=tag value2~..."
+   - --tag "Genre=Technical Priapism"
+   - also see audiostag options for Tag
+- --keep-tag|-k "tag field1~tag field2~..."
+   - --keep-tag "TPOS~TCOM~TPUB"
+   - also see audiostag options for Keep Tag
 
-- --dir|-d
-- --extract-exclude
-- --file|-f
-- --out|-o
-- --path|-p
+- --dir|-d "absolute path"
+   - look for files in this directory (absolute path)
+- --extract-exclude "regex"
+   - --extract-exclude ".*\.png"
+   - also see audiostag options for Exclude File
+- --file|-f "filename"
+   - look for this filename
+- --out|-o "filename|window"
+   - specify a filename to write tags to
+      - --out album_tags.txt
+   - window to write data to a nice little table
+      - --out window
+- --path|-p "absolute path"
+   - the full path to the album we want to tag
   
-- --album-folder-name
-- --case
-- --cover-album
-- --cover-artist
-- --cover
-- --cover-source|-c
+- --album-folder-name "Album Folder Name"
+   - --album-folder-name "Ibiza Hallucinations Volume 69"
+   - also see audiostag options for Album Folder
+- --case "CaseType"
+   - change the case of Title, Artist & Album
+      - FoldCase to fold to lower case
+      - LowerCase to change all letters to lowercase
+      - SentenceCase to capitalize the first letter of each line
+      - TitleCase to capitalize the first letter of each word
+      - UpperCase to capitalize all letters
+   - --case "TitleCase"
+- --cover-album "album name"
+   - --cover-album "Mellin Collie and Sadness Ad Infinitum"
+   - also see audiostag options for Cover Album
+- --cover-artist "artist name"
+   - --cover-artist "Smashed Winter Squash of the Orange Varietal"
+   - also see audiostag options for Cover Artist
+- --cover "Artist|Album"
+   - use instead of separate --cover-album and --cover-artist to get cover art from musicbrainz/coverartarchive
+- --cover-source|-c "URL|Path to local file"
+   - instead of from a local file or calling out to musicbrainz, use the cover art from URL or path to local file
 - --multi-disc
-- --playlist-name
+   - process this album as though it has multiple discs
+- --playlist-name "name of playlist"
+   - see audiostag options for Playlist Name
 - --single-artist
+   - see audiostag options for Single Artist
 - --various
+   - see audiostag options for Various Artists
 
 - --album
+   - extract files from archive (i.e. .tar file)
+   - tag the extracted files with default values
 - --dummy-files
+   - copy all files in archive or folder to empty .mp3 files and copy tags
 - --extract|-e
+   - extract files from archive
+   - if the archive contains split .rar files the .rar files will also be extracted
 - --list|-l
+   - list all tags in file to the terminal
 - --no-artist-split
+   - do not separate comma-separated artists values
 - --no-directory-rename
+   - do not rename any directories (this is especially helpful when you know audiostag is going to get it wrong)
 - --playlist
+   - create a playlist file for all files in the specified folder
 - --print-tags
+   - display tags 
 - --set-default-tags|-s
+   - sets all tags in directory to default values
 - --show-archive-tags
+   - display tags from files in specified archive file
 - --show-tags
+   - display tags from files in specified directory
 - --show-tags-chooser
+   - display tags in archive or folder
 
 - --create-extract-archive-shortcut
+   - creates a macOS Shortcut that triggers archive extraction in the "Quick Actions" menu of a Finder right-click
 - --create-show-tags-shortcut
+   - creates a macOS Shortcut that triggers the display of tags within a folder or archive from the "Quick Actions" menu of a Finder right-click 
