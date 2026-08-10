@@ -190,23 +190,23 @@ Upon first use you will have allow audiostag to run in Privacy settings where I 
 - --precondition "source tag=regex=destination tag=expression to place in matching tags=expression to place in all other tags~Source Tag2..."
    - --precondition "Track Number=1-10=Disc Number=1/2=2/2"
    - also see audiostag options for Precondition
-- --prereplace "tag=regex=replace value~tag2=regex2=replace value2~..."
-   - --prereplace "TALB= \(Deluxe Edition\)=" (you can also use the tag name "Album")
+- --prereplace "tag=regex=replace value\~tag2=regex2=replace value2\~..."
+   - --prereplace "TALB= \\(Deluxe Edition\\)=" (you can also use the tag name "Album")
    - also see audiostag options for Prereplace
-- --replace|-r "tag=regexp=replacement value~tag2=regexp2=replacement value2~..."
-   - -r "Title= \(Deluxe [^)]*\)="
+- --replace|-r "tag=regexp=replacement value\~tag2=regexp2=replacement value2\~..."
+   - -r "Title= \\(Deluxe [^)]*\\)="
    - also see audiostag options for Replace
-- --tag|-t "tag=tag value~tag2=tag value2~..."
+- --tag|-t "tag=tag value\~tag2=tag value2\~..."
    - --tag "Genre=Technical Priapism"
    - also see audiostag options for Tag
-- --keep-tag|-k "tag field1~tag field2~..."
-   - --keep-tag "TPOS~TCOM~TPUB"
+- --keep-tag|-k "tag field1\~tag field2\~..."
+   - --keep-tag "TPOS\~TCOM\~TPUB"
    - also see audiostag options for Keep Tag
 
 - --dir|-d "absolute path"
    - look for files in this directory (absolute path)
 - --extract-exclude "regex"
-   - --extract-exclude ".*\.png"
+   - --extract-exclude ".*\\.png"
    - also see audiostag options for Exclude File
 - --file|-f "filename"
    - look for this filename
