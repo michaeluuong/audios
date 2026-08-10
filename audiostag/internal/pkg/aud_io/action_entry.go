@@ -53,8 +53,6 @@ EntryLoop:
 			o.SetChecked(true)
 
 		case *widget.Entry:
-			//lastEntry, ok := entries[len(entries)-1].(*widget.Entry)
-			//if o.Text == "" || (ok && lastEntry.HasValue()) {
 			if o.Text == "" || o.Text == o.PlaceHolder {
 				isHead := action.placeHolders[i].isHead
 				if isHead {
@@ -81,15 +79,11 @@ EntryLoop:
 			}
 
 		case *widget.SelectEntry:
-			fmt.Printf("UpdateEntries()|o.Text: %s, header: %s, data: %s\n", o.Text, header, data)
 			if o.Text == "" || o.Text == o.PlaceHolder {
 				isHead := action.placeHolders[i].isHead
 				if isHead {
 					if tagName, ok := mp3Config.IDToNameMod[header]; ok {
 						o.SetText(tagName)
-
-						/*} else if header == "File" {
-						o.SetText(header)*/
 
 					}
 
@@ -124,10 +118,6 @@ func (a *ActionSelectEntry) submissionsToFlags() []string {
 		action := a.actionEntries.nameToAction[actionName].action
 		allFlags = append(allFlags, action)
 		allFlags = append(allFlags, subText)
-		/*for _, flag := range *submissions {
-			allFlags = append(allFlags, "\""+flag+"\"")
-
-		}*/
 
 	}
 
@@ -135,10 +125,15 @@ func (a *ActionSelectEntry) submissionsToFlags() []string {
 
 }
 
-func (a *ActionSelectEntry) execute(win fyne.Window, filePath string) error {
+func (a *ActionSelectEntry) execute(win fyne.Window, filePath string, hasCompleted bool) error {
 	allFlags := []string{"--path", filePath}
 	if !a.actionEntries.isNotAlbum {
 		allFlags = append(allFlags, "--album")
+
+		if hasCompleted {
+			allFlags = append(allFlags, "--no-directory-rename")
+
+		}
 
 	}
 
@@ -178,16 +173,12 @@ func (a *ActionSelectEntry) setOnChanged() {
 			for _, entry := range entries {
 				switch o := entry.(type) {
 				case *widget.Check:
-					//if actionEntry.isBool {
 					o.SetChecked(true)
 
 				case *widget.Entry:
-					//} else {
-					//o.SetText("")
 					o.SetPlaceHolder(o.PlaceHolder)
 
 				case *widget.SelectEntry:
-					//o.SetText(o.PlaceHolder)
 					o.SetPlaceHolder(o.PlaceHolder)
 
 				}
@@ -210,8 +201,8 @@ func (a *ActionSelectEntry) setSubmitButton() {
 	a.submitButton = widget.NewButton("Submit", func() {
 		currentActionName := a.currentActionName
 		submission := fmt.Sprintf("%s", a.actionEntries.nameToAction[currentActionName])
-		fmt.Printf("setSubmitButton()|submission: %v\n", submission)
 		actionEntries := a.actionEntries
+
 		//fmt.Printf("action: %s, submission: %v, submissions: %v\n", action, submission, submissions)
 		//*submissions = append(*submissions, submission)
 		if submission != "" {
@@ -221,7 +212,6 @@ func (a *ActionSelectEntry) setSubmitButton() {
 
 		a.updateEntry.SetText("")
 		for actionName, submissions := range actionEntries.nameToSubmissions {
-			//subText := strings.Join(*submissions, "~")
 			subText := strings.Join(*submissions, mp3Config.TagSeparator)
 
 			action := actionEntries.nameToAction[actionName].action
@@ -261,7 +251,6 @@ func (a *ActionSelectEntry) setDeleteButton() {
 		actionEntries := a.actionEntries
 		actionEntries.deleteSubmission(currentActionName)
 
-		//subText := strings.Join(actionEntries.submissions(currentActionName), "~")
 		if actionEntry, ok := actionEntries.nameToAction[currentActionName]; ok {
 			for _, entry := range actionEntry.entries {
 				switch o := entry.(type) {
@@ -284,7 +273,6 @@ func (a *ActionSelectEntry) setDeleteButton() {
 
 		a.updateEntry.SetText("")
 		for actionName, submissions := range actionEntries.nameToSubmissions {
-			//subText := strings.Join(*submissions, "~")
 			subText := strings.Join(*submissions, mp3Config.TagSeparator)
 			action := actionEntries.nameToAction[actionName].action
 			if subText != "" {
@@ -298,17 +286,15 @@ func (a *ActionSelectEntry) setDeleteButton() {
 
 }
 
-func NewActionSelectEntry(win fyne.Window, filePath string, actions []*ActionEntry, placeholder string) *ActionSelectEntry {
-	fmt.Printf("NewActionSelectEntry()|start\n")
+func NewActionSelectEntry(win fyne.Window, filePath string, actions []*ActionEntry, placeholder string, hasCompleted bool) *ActionSelectEntry {
 	updateEntry := widget.NewEntry()
 	actionSelectEntry := &ActionSelectEntry{
-		//updateEntry:   updateEntry,
 		updateEntry: updateEntry,
 	}
 	actionSelectEntry.actionEntries = NewActionEntries(actions, updateEntry)
 
 	executeBtn := widget.NewButton("Execute", func() {
-		actionSelectEntry.execute(win, filePath)
+		actionSelectEntry.execute(win, filePath, hasCompleted)
 
 	})
 	updateEntryContainer := container.NewBorder(nil, nil, nil, executeBtn, updateEntry)
@@ -326,7 +312,6 @@ func NewActionSelectEntry(win fyne.Window, filePath string, actions []*ActionEnt
 	actionSelectEntry.setDeleteButton()
 	actionSelectEntry.setOnChanged()
 
-	//actionSelectEntry.actionContainer = container.NewBorder(nil, nil, nil, actionSelectEntry.actionEntries.rightContainer)
 	actionSelectEntry.actionContainer = container.NewBorder(nil, updateEntryContainer, actionSelectEntry, nil, actionSelectEntry.actionEntries.rightContainer)
 
 	return actionSelectEntry
@@ -342,12 +327,10 @@ type ActionEntry struct {
 	name         string
 	action       string
 	placeHolders []placeHolder
-	//entries      []*widget.Entry
-	//entries    []*fyne.CanvasObject
-	entries    []fyne.CanvasObject
-	isBool     bool
-	isNotAlbum bool
-	isSingle   bool
+	entries      []fyne.CanvasObject
+	isBool       bool
+	isNotAlbum   bool
+	isSingle     bool
 }
 
 func (a ActionEntry) String() string {
@@ -377,9 +360,7 @@ func (a ActionEntry) String() string {
 
 				if i <= len(a.placeHolders)-1 {
 					if a.placeHolders[i].isHead {
-						fmt.Printf("String()|isHead: %t\n", a.placeHolders[i].isHead)
 						if id, ok := mp3Config.NameToIDMod[o.Text]; ok {
-							fmt.Printf("String()|id: %s, ok: %t\n", id, ok)
 							sb.WriteString(id)
 
 						} else {
@@ -388,7 +369,6 @@ func (a ActionEntry) String() string {
 						}
 
 					} else {
-						fmt.Printf("String()|else\n")
 						sb.WriteString(o.Text)
 
 					}
@@ -401,7 +381,6 @@ func (a ActionEntry) String() string {
 
 	}
 
-	//return a.action + " \"" + sb.String() + "\""
 	return sb.String()
 
 }
@@ -410,9 +389,8 @@ type ActionEntries struct {
 	actions           []*ActionEntry
 	nameToAction      map[string]*ActionEntry
 	nameToSubmissions map[string]*[]string
-	//submitButton      *widget.Button
-	rightContainer *fyne.Container
-	isNotAlbum     bool
+	rightContainer    *fyne.Container
+	isNotAlbum        bool
 }
 
 func (a *ActionEntries) addSubmission(name, submission string) {
@@ -494,28 +472,11 @@ func (a *ActionEntries) actionEntry() {
 	for _, a := range a.actions {
 		for _, placeHolder := range a.placeHolders {
 			if a.isBool {
-				/*textField.Validator = func(text string) error {
-					if text != "true" && text != "false" {
-						return errors.New("must be true or false")
-
-					}
-
-					return nil
-
-				}
-
-				textField.SetText("true")*/
-				/*checkLabel := widget.NewLabel("true")
-				check := widget.NewCheck(placeHolder.desc, func(checked bool) {
-					checkLabel.SetText(fmt.Sprintf("%t", checked))
-
-				})*/
 				check := widget.NewCheck(placeHolder.desc, func(checked bool) {})
 				a.entries = append(a.entries, check)
 
 			} else if placeHolder.isHead {
 				options := slices.Collect(maps.Keys(mp3Config.NameToIDMod))
-				//options = append(options, "File")
 				slices.Sort(options)
 				selEntry := widget.NewSelectEntry(options)
 				selEntry.SetPlaceHolder(placeHolder.desc)
@@ -549,178 +510,4 @@ func NewActionEntries(actions []*ActionEntry, updateEntry *widget.Entry) *Action
 	actionEntries.SetActions(actions, updateEntry)
 
 	return actionEntries
-}
-
-/*func NewSelectEntryEntry(valueNum int, updateEntry *widget.Entry) []*widget.Entry {
-	const maxEntries = 10
-	var widgetEntries []*widget.Entry
-	if valueNum >= 0 && valueNum <= maxEntries {
-		for range valueNum {
-			textField := widget.NewEntry()
-			textField.PlaceHolder = "Field Name"
-			textField.Resize(fyne.NewSize(100.0, textField.MinSize().Height))
-			widgetEntries = append(widgetEntries, textField)
-
-		}
-
-	}
-
-	return widgetEntries
-
-}*/
-
-// func SelectEntry(win fyne.Window, filePath string, state *TagTableDataAppState) *ActionSelectEntry {
-func SelectEntryOld(win fyne.Window, filePath string) *ActionSelectEntry {
-	fmt.Printf("SelectEntry()|start\n")
-	//textEntry := widget.NewEntry()
-	//state.textField = textEntry
-	/*actionToFlag := map[string]string{
-		"Tag":          "--tag",
-		"Pre Replace":  "--pre-replace",
-		"RegEx":        "--replace",
-		"Album Folder": "--album-folder-name",
-	}*/
-
-	actions := []*ActionEntry{
-		{
-			name:         "Album Folder",
-			action:       "--album-folder-name",
-			placeHolders: []placeHolder{{desc: "folder name"}},
-			isSingle:     true,
-		}, {
-			name:         "Dummy Files",
-			action:       "--dummy-files",
-			placeHolders: []placeHolder{{desc: "true/false"}},
-			isBool:       true,
-			isNotAlbum:   true,
-		}, {
-			name:         "Various Artists",
-			action:       "--various",
-			placeHolders: []placeHolder{{desc: "true/false"}},
-			isBool:       true,
-		}, {
-			name:         "Exclude File",
-			action:       "--extract-exclude",
-			placeHolders: []placeHolder{{desc: "exclude file"}},
-			isSingle:     true,
-		}, {
-			name:         "Keep Tag",
-			action:       "--keep-tag",
-			placeHolders: []placeHolder{{desc: "keep tag", isHead: true}},
-		}, {
-			name:         "Playlist Name",
-			action:       "--playlist-name",
-			placeHolders: []placeHolder{{desc: "playlist name"}},
-			isSingle:     true,
-		}, {
-			name:   "Pre Condition",
-			action: "--pre-condition",
-			placeHolders: []placeHolder{
-				{desc: "src tag", isHead: true},
-				{desc: "regex"},
-				{desc: "dest tag", isHead: true},
-				{desc: "match value"},
-				{desc: "else value"},
-			},
-		}, {
-			name:   "Pre Replace",
-			action: "--pre-replace",
-			placeHolders: []placeHolder{
-				{desc: "tag", isHead: true},
-				{desc: "regex"},
-				{desc: "replace value"},
-			},
-		}, {
-			name:   "Replace",
-			action: "--replace",
-			placeHolders: []placeHolder{
-				{desc: "tag", isHead: true},
-				{desc: "regex"},
-				{desc: "replace value"},
-			},
-		}, {
-			name:   "Tag",
-			action: "--tag",
-			placeHolders: []placeHolder{
-				{desc: "tag", isHead: true},
-				{desc: "value"},
-				{desc: "optional value"},
-			},
-		},
-	}
-
-	//selectEntryEntries := NewActionEntries(textEntry)
-	//selectEntry := NewActionSelectEntry([]string{"Album Folder", "Tag", "Pre Replace", "RegEx"}, "Choose or type")
-	selectEntry := NewActionSelectEntry(win, filePath, actions, "Choose or type")
-	/*submitButton := widget.NewButton("Submit", func() {
-		var textEntryFields []*widget.Entry
-		var flagText string
-		switch selectEntry.Text {
-		case "Album Folder":
-			textEntryFields = selectEntryEntries.AlbumFolder
-			flagText = fmt.Sprintf("%s \"%s", actionToFlag["Album Folder"], textEntryFields[0].Text)
-
-		case "PreReplace":
-			textEntryFields = selectEntryEntries.Replace
-			flagText = fmt.Sprintf("%s \"%s=%s=%s", actionToFlag["PreReplace"], textEntryFields[0].Text, textEntryFields[1].Text)
-
-		case "RegEx":
-			textEntryFields = selectEntryEntries.Replace
-			flagText = fmt.Sprintf("%s \"%s=%s=%s", actionToFlag["RegEx"], textEntryFields[0].Text, textEntryFields[1].Text)
-
-		case "Tag":
-			textEntryFields = selectEntryEntries.Tag
-			flagText = fmt.Sprintf("%s \"%s=%s=%s", actionToFlag["Tag"], textEntryFields[0].Text, textEntryFields[1].Text)
-
-		}
-
-		textEntry.SetText(flagText)
-
-	})
-	submitButton.Importance = widget.LowImportance*/
-
-	//rightContainer := container.NewHBox()
-	//rightContainer := container.NewGridWithColumns(4)
-	//rightContainer.Resize(fyne.NewSize(300, rightContainer.MinSize().Height))
-	/*selectEntry.OnChanged = func(value string) {
-		log.Println("clicked: ", value)
-		if flag, ok := actionToFlag[value]; ok {
-			textEntry.SetText(flag)
-			rightContainer.RemoveAll()
-
-			var textEntryFields []*widget.Entry
-			switch value {
-			case "Tag":
-				textEntryFields = selectEntryEntries.Tag
-
-			case "PreReplace":
-				textEntryFields = selectEntryEntries.Replace
-
-			case "RegEx":
-				textEntryFields = selectEntryEntries.Replace
-
-			case "Album Folder":
-				textEntryFields = selectEntryEntries.AlbumFolder
-			}
-
-			for _, textEntry := range textEntryFields {
-				fmt.Printf("Adding textEntry\n")
-				rightContainer.Add(textEntry)
-
-			}
-
-			rightContainer.Add(submitButton)
-			rightContainer.Refresh()
-
-		}
-
-	}*/
-
-	//selectEntryContainer := container.NewHBox(selectEntry, rightContainer)
-	//selectEntryContainer := container.NewBorder(nil, nil, selectEntry, nil, rightContainer)
-	//return container.NewBorder(selectEntryContainer, textEntry, nil, nil, nil)
-	//return container.NewBorder(nil, nil, selectEntry, nil)
-	//return selectEntry.actionContainer
-	return selectEntry
-
 }

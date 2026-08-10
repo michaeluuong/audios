@@ -146,9 +146,9 @@ func (w *Winman) IsInfiniteProgress() bool {
 
 }
 
-func (w *Winman) TagTableShow(title string, data [][]string, cImg CoverImage, showActions bool) {
+func (w *Winman) TagTableShow(title string, data [][]string, cImg CoverImage, showActions bool, hasCompleted bool) {
 	win := w.NewWindow()
 
-	ShowTagTable(title, data, cImg, win, showActions)
+	ShowTagTable(title, data, cImg, win, showActions, hasCompleted)
 
 }

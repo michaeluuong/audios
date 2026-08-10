@@ -4,7 +4,7 @@ package a_global
 import (
 	"os"
 
-	"github.com/michaeluuong/audios/audiostag/internal/pkg/config"
+	"github.com/michaeluuong/config"
 )
 
 var _ = os.Setenv("PROGNAME", "audiostag")

@@ -11,7 +11,8 @@ require (
 	github.com/laurent22/go-trash v0.0.0-20250304161307-725f51160fe4
 	github.com/lizc2003/audioduration v0.8.0
 	github.com/mholt/archives v0.1.5
-	github.com/michaeluuong/utilize v0.0.0-20260806211038-0035229851dc
+	github.com/michaeluuong/config v0.0.0-20260810183944-136fa4449b21
+	github.com/michaeluuong/utilize v0.0.0-20260807011659-fda22c051df6
 	github.com/muesli/gomusicbrainz v0.0.0-20140917145958-0685d3f2a400
 	github.com/spf13/pflag v1.0.10
 	github.com/stretchr/testify v1.11.1

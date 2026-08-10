@@ -141,7 +141,7 @@ func SetDefaultTags(dir, filename string, tagAttr *config.TagAttributes) error {
 				//ReadTags(disc.Tracks)
 
 				//stringy.PrintLine("=", 130, "\n")
-				PrintTags(disc.DestDir, "window", "false")
+				PrintTags(disc.DestDir, "window", "showActions", "completed")
 
 				stringy.PrintLine("-", 130, "\n")
 

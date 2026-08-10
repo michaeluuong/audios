@@ -127,13 +127,8 @@ func (a *Artist) AddAll(dir string, tagAttrOpt ...*config.TagAttributes) error {
 
 	}
 
-	for i, filePath := range filePaths {
-		//stringy.PrintLine("=", 80)
-		//fmt.Printf("%s\n", filePath)
+	for _, filePath := range filePaths {
 		a.Add(filePath)
-		if i == 1 {
-			//os.Exit(1)
-		}
 
 	}
 
@@ -141,14 +136,6 @@ func (a *Artist) AddAll(dir string, tagAttrOpt ...*config.TagAttributes) error {
 		a.SetTotalTrackNumbers(true)
 
 	}
-
-	//fmt.Printf("Artist.AddAll()|a: %s\n", a)
-	/*fmt.Printf("Artist.AddAll()|a.albums: %s\n", a.albums)
-	for _, album := range a.albums {
-		fmt.Printf("Artist.AddAll|\talbum.numToDisc: %s\n", album.numToDisc)
-
-	}*/
-	//a.PrintDestDirs()
 
 	if taggerConfig.TagAttr.MultiDisc == "" && a.TotalDiscs() > 1 {
 		taggerConfig.TagAttr.MultiDisc = "true"
@@ -162,13 +149,10 @@ func (a *Artist) AddAll(dir string, tagAttrOpt ...*config.TagAttributes) error {
 
 	}
 
-	slog.Debug("POES", "TotalArtists()", a.TotalArtists(), "TotalTracks()", a.TotalTracks(), "findCommonArtist()", a.findCommonArtist(), "a.Name", a.Name)
-	//if a.TotalArtists() == 1 && !strings.Contains(a.Name, ",") && !taggerConfig.TagAttr.NoArtistSplit {
 	if a.TotalArtists() == 1 && taggerConfig.TagAttr.SingleArtist == "" {
 		taggerConfig.TagAttr.SingleArtist = "true"
 
 	}
-	slog.Debug("POES", "VariousArtists", taggerConfig.TagAttr.VariousArtists, "SingleArtist", taggerConfig.TagAttr.SingleArtist)
 
 	slog.Log(context.TODO(), slogLevelArtist, "finished")
 	return nil
@@ -193,7 +177,6 @@ func (a *Artist) findCommonArtist() string {
 		}
 
 	}
-	slog.Debug("POES", "artistNum", artistNum)
 
 	if len(fullArtistNum) == 1 {
 		return artist
@@ -246,7 +229,6 @@ func (a *Artist) addToAlbum(track *Track) (*Album, error) {
 	albumName := track.mp3.V2.Album()
 
 	album := a.Album(albumName)
-	//fmt.Printf("addToAlbum()|album: %s, albumName: %s\n", album, albumName)
 	if album == nil {
 		var err error
 		album, err = NewAlbum(albumName, track.DestDir)
@@ -497,8 +479,8 @@ func (a *Artist) SetTotalTrackNumbers(setTotal bool) {
 }
 
 func (a *Artist) Rename() error {
-	var trackDir string
-	fmt.Printf("Rename()|a.DestDir: %s\n", a.DestDir)
+	var trackDir, albumFolder string
+
 	for _, track := range a.TrackIter() {
 		if trackDir == "" {
 			if taggerConfig.ArtworkRegex() != "" {
@@ -514,15 +496,22 @@ func (a *Artist) Rename() error {
 
 			}
 
+			trackDir = track.FilePath
+			albumFolder = albumFolderName(track)
+
 		}
+
 		a.setDestDirs(track, DirLevelArtist)
 
 	}
 
-	fmt.Printf("Rename()|a.DestDir: %s\n", a.DestDir)
-	err := os.Rename(a.OriginalDir, a.DestDir)
-	if err != nil {
-		return err
+	albumBase := filepath.Base(trackDir)
+	if albumBase != albumFolder {
+		err := os.Rename(a.OriginalDir, a.DestDir)
+		if err != nil {
+			return err
+
+		}
 
 	}
 
@@ -668,19 +657,18 @@ func (a *Album) addArtistName(artistName string) {
 func (a *Album) setDestDir(track *Track) {
 	slog.Log(context.TODO(), slogLevelArtist, "started", "track", track)
 
-	nameToValue := track.nameToValue
 	filePath := track.FilePath
 	artistDir := filepath.Dir(filepath.Clean(filePath))
 	albumBase := track.mp3.V2.Album()
 
-	albumFolderExp := taggerConfig.AlbumFolderExp
-
+	/*nameToValue := track.nameToValue
 	var originalAlbum string
 	if value, ok := track.idToValue["TOAL"]; ok {
 		originalAlbum = value
 
 	}
 
+	albumFolderExp := taggerConfig.AlbumFolderExp
 	if track.MultiDiscAlbumName() != "" && originalAlbum != "" && !taggerConfig.TagAttr.NoDirectoryRename {
 		albumFolderExp = strings.ReplaceAll(albumFolderExp, "{album}", "{original album}")
 
@@ -690,7 +678,10 @@ func (a *Album) setDestDir(track *Track) {
 		albumBase = stringy.ReplaceUserString(albumFolderExp, nameToValue, stringy.TitleCase)
 
 	}
-	albumBase = filing.NormalizeFilename(albumBase)
+
+	albumBase = filing.NormalizeFilename(albumBase)*/
+	albumFolder := albumFolderName(track)
+	albumBase = filing.NormalizeFilename(albumFolder)
 
 	a.lastDestDir = a.DestDir
 	a.DestDir = filepath.Join(artistDir, albumBase)
@@ -698,6 +689,29 @@ func (a *Album) setDestDir(track *Track) {
 
 	trackDir := filepath.Join(a.DestDir, track.Filename)
 	track.SetDestDir(trackDir)
+
+}
+
+func albumFolderName(track *Track) string {
+	var originalAlbum string
+	if value, ok := track.idToValue["TOAL"]; ok {
+		originalAlbum = value
+
+	}
+
+	albumFolderExp := taggerConfig.AlbumFolderExp
+	if track.MultiDiscAlbumName() != "" && originalAlbum != "" && !taggerConfig.TagAttr.NoDirectoryRename {
+		albumFolderExp = strings.ReplaceAll(albumFolderExp, "{album}", "{original album}")
+
+	}
+
+	var albumBase string
+	if taggerConfig.AlbumFolderExp != "" {
+		albumBase = stringy.ReplaceUserString(albumFolderExp, track.nameToValue, stringy.TitleCase)
+
+	}
+
+	return albumBase
 
 }
 

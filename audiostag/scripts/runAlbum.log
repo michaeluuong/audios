@@ -1,336 +1,55 @@
-++ dirname /Users/irenepiechota-wong/DEV/GO/audios/audiostag/SCRIPTS
-+ PROG_DIR=/Users/irenepiechota-wong/DEV/GO/audios/audiostag
+++ dirname /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/SCRIPTS
++ PROG_DIR=/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag
 ++ pwd
-+ PWD=/Users/irenepiechota-wong/DEV/GO/audios/audiostag/SCRIPTS
-+ echo 'args: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH.tar'
-args: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH.tar
-+ FILE=/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH.tar
-+ /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiostag --path /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH.tar --album
-2026/07/23 18:43:14 INFO found config file from user config directory userConfigFile="/Users/irenepiechota-wong/Library/Application Support/audiostag/config/slog_cfg.json"
-2026/07/23 18:43:14 INFO FindConfigFile() EnvVar="" DefaultConfigFilename=slog_cfg.json cFile="/Users/irenepiechota-wong/Library/Application Support/audiostag/config/slog_cfg.json" err=<nil>
-2026/07/23 18:43:14 INFO defining rotator rotator="&{Filename:/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiostag.log MaxSize:50 MaxAge:30 MaxBackups:30 LocalTime:false Compress:false size:0 file:<nil> mu:{_:{} mu:{state:0 sema:0}} millCh:<nil> startMill:{_:{} done:{_:{} v:0} m:{_:{} mu:{state:0 sema:0}}}}"
++ PWD=/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/SCRIPTS
++ echo 'args: /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK'
+args: /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK
++ FILE=/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK
++ /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiostag --path /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK --album
+2026/08/08 20:33:43 INFO found config file from user config directory userConfigFile="/Users/irenepiechota-wong/Library/Application Support/audiostag/config/slog_cfg.json"
+2026/08/08 20:33:43 INFO FindConfigFile() EnvVar="" DefaultConfigFilename=slog_cfg.json cFile="/Users/irenepiechota-wong/Library/Application Support/audiostag/config/slog_cfg.json" err=<nil>
+2026/08/08 20:33:43 INFO defining rotator rotator="&{Filename:/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiostag.log MaxSize:50 MaxAge:30 MaxBackups:30 LocalTime:false Compress:false size:0 file:<nil> mu:{_:{} mu:{state:0 sema:0}} millCh:<nil> startMill:{_:{} done:{_:{} v:0} m:{_:{} mu:{state:0 sema:0}}}}"
 Found config file from user config directory, {"userConfigFile":"/Users/irenepiechota-wong/Library/Application Support/audiostag/config/audiostag_cfg.json"}
 FindConfigFile(), {"DefaultConfigFilename":"audiostag_cfg.json","EnvVar":"","cFile":"/Users/irenepiechota-wong/Library/Application Support/audiostag/config/audiostag_cfg.json","err":"\u003cnil\u003e"}
-Parse(), {"pArg":"PflagArgs{preConditionsFlag:\"\", preReplaceFlag:\"\", replaceFlag:\"\", tagFlag:\"\", albumFolderNameFlag:\"\", caseFlag:\"\", coverArtistFlag:\"\", coverAlbumFlag:\"\", coverFlag:\"\", coverSourceFlag:\"\", dirFlag:\"\", extractExcludeFlag:\"\", fileFlag:\"\", multiDiscFlag:\"\", outFlag:\"\", pathFlag:\"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH.tar\", playlistNameFlag:\"\", variousFlag:\"\", albumFlag:true, extractFlag:false, listFlag:false, noDirectoryRename:false, playlistFlag:false, printTagsFlag:false, setDefaultTagsFlag:false, showArchiveTagsFlag:false, showTagsFlag:false, testFlag:false, intFlag:0}\n","pflag.Args()":"[]"}
-Pflag, {"dir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/","filePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH.tar","filename":"Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH.tar"}
+Parse(), {"pArg":"PflagArgs{preConditionsFlag:\"\", preReplaceFlag:\"\", replaceFlag:\"\", tagFlag:\"\", keepTagFlag:\"\", albumFolderNameFlag:\"\", caseFlag:\"\", coverArtistFlag:\"\", coverAlbumFlag:\"\", coverFlag:\"\", coverSourceFlag:\"\", dirFlag:\"\", extractExcludeFlag:\"\", fileFlag:\"\", multiDiscFlag:\"\", outFlag:\"\", pathFlag:\"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK\", playlistNameFlag:\"\", singleArtistFlag:\"\", variousFlag:\"\", albumFlag:true, dummyFilesFlag:false, extractFlag:false, listFlag:false, noArtistSplit:false, noDirectoryRename:false, playlistFlag:false, printTagsFlag:false, setDefaultTagsFlag:false, showArchiveTagsFlag:false, showTagsFlag:false, createExtractArchiveShortcutFlag:false, createShowTagsShortcutFlag:false, testFlag:false, intFlag:0}\n","pflag.Args()":"[]"}
+Pflag, {"dir":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/","filePath":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK","filename":"Vana-In_Your_Name_bw_Pray-Web-2026-FKK"}
 
 ----------------------------------------------------------------------------------------------------------------------------------
---album extracting and tagging, {"filePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH.tar"}
-Winman.Run()|running func
-Winman.Run()|run
-
-
-----------------------------------------------------------------------------------------------
-Extracting archive /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH.tar, dir: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/, fileanme: Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH.tar
-Archive format identified, {"format.Extension":".tar","format.MediaType()":"application/x-tar"}
-Renaming file, {"strRe":".*proof.*","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/cover.jpg"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/cover.jpg"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/01-rick_ross-caviar_bumps-1e28a176.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/02-rick_ross_ti-mahogany_caskets-d042dfcb.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/03-rick_ross_french_montana_max_b-minks_in_miami-3817e298.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/04-rick_ross_rich_the_kid-face_down-49e447ac.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/05-rick_ross_yfn_lucci-ring_around_the_rolls-54a56f73.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/06-rick_ross_deon_cole-camel_meat-67562847.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/07-rick_ross_jeezy_don_toliver-maybach_music_vii-c112fffb.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/08-rick_ross_bigxthaplug-living_large-e7504c38.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/09-rick_ross-purple_fentanyl-2c898179.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/10-rick_ross-23-55652243.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/11-rick_ross-porsche_gt3__rs-a4c9987c.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/12-rick_ross_the-dream-city_lights-7a0bf474.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/13-rick_ross_nino_breeze_big_tony-chain_of_command-66204854.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/14-rick_ross_leon_thomas-remarkable_hussle-cba9bdea.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/15-rick_ross_gucci_mane-big_fish-625aecb6.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/16-rick_ross_kodak_black_ball_greezy-diamonds_never_die-ad2075b6.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/17-rick_ross_yung_miami-shes_my_star-b7557dfa.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/18-rick_ross_young_breed_dj_nasty-do_it_one_time-0657f90a.mp3"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/19-rick_ross-the_algorithm-52a4f852.mp3"}
-setting default tags for /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/
+--album extracting and tagging, {"filePath":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK"}
+ERROR: archives.Identify()|could not identify archive, map[string]string{"err":"matching bz2: read /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK: is a directory", "filename":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK"}
+setting default tags for /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/
 
 AUD-2, {"tagAttr.Audibles":""}
-Directories to process, {"dirnames":"[/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH]"}
-dirI: 0, dir: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/01-rick_ross-caviar_bumps-1e28a176.mp3","OriginalFilename":"01-rick_ross-caviar_bumps-1e28a176.mp3","normalizedFilename":"01. Caviar Bumps.mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/02-rick_ross_ti-mahogany_caskets-d042dfcb.mp3","OriginalFilename":"02-rick_ross_ti-mahogany_caskets-d042dfcb.mp3","normalizedFilename":"02. Mahogany Caskets (with T.I.).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/03-rick_ross_french_montana_max_b-minks_in_miami-3817e298.mp3","OriginalFilename":"03-rick_ross_french_montana_max_b-minks_in_miami-3817e298.mp3","normalizedFilename":"03. Minks In Miami (with French Montana \u0026 Max B).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/04-rick_ross_rich_the_kid-face_down-49e447ac.mp3","OriginalFilename":"04-rick_ross_rich_the_kid-face_down-49e447ac.mp3","normalizedFilename":"04. Face Down (with Rich the kid).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/05-rick_ross_yfn_lucci-ring_around_the_rolls-54a56f73.mp3","OriginalFilename":"05-rick_ross_yfn_lucci-ring_around_the_rolls-54a56f73.mp3","normalizedFilename":"05. Ring Around The Rolls (with YFN Lucci).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/06-rick_ross_deon_cole-camel_meat-67562847.mp3","OriginalFilename":"06-rick_ross_deon_cole-camel_meat-67562847.mp3","normalizedFilename":"06. Camel Meat (with Deon Cole).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/07-rick_ross_jeezy_don_toliver-maybach_music_vii-c112fffb.mp3","OriginalFilename":"07-rick_ross_jeezy_don_toliver-maybach_music_vii-c112fffb.mp3","normalizedFilename":"07. Maybach Music VII (with Jeezy \u0026 Don Toliver).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/08-rick_ross_bigxthaplug-living_large-e7504c38.mp3","OriginalFilename":"08-rick_ross_bigxthaplug-living_large-e7504c38.mp3","normalizedFilename":"08. Living Large (with BigXthaPlug).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/09-rick_ross-purple_fentanyl-2c898179.mp3","OriginalFilename":"09-rick_ross-purple_fentanyl-2c898179.mp3","normalizedFilename":"09. Purple Fentanyl.mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/10-rick_ross-23-55652243.mp3","OriginalFilename":"10-rick_ross-23-55652243.mp3","normalizedFilename":"10. 23.mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/11-rick_ross-porsche_gt3__rs-a4c9987c.mp3","OriginalFilename":"11-rick_ross-porsche_gt3__rs-a4c9987c.mp3","normalizedFilename":"11. Porsche GT3 - RS.mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/12-rick_ross_the-dream-city_lights-7a0bf474.mp3","OriginalFilename":"12-rick_ross_the-dream-city_lights-7a0bf474.mp3","normalizedFilename":"12. City Lights (with The-Dream).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/13-rick_ross_nino_breeze_big_tony-chain_of_command-66204854.mp3","OriginalFilename":"13-rick_ross_nino_breeze_big_tony-chain_of_command-66204854.mp3","normalizedFilename":"13. Chain of Command (with Nino Breeze \u0026 Big Tony).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/14-rick_ross_leon_thomas-remarkable_hussle-cba9bdea.mp3","OriginalFilename":"14-rick_ross_leon_thomas-remarkable_hussle-cba9bdea.mp3","normalizedFilename":"14. Remarkable Hussle (with Leon Thomas).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/15-rick_ross_gucci_mane-big_fish-625aecb6.mp3","OriginalFilename":"15-rick_ross_gucci_mane-big_fish-625aecb6.mp3","normalizedFilename":"15. Big Fish (with Gucci Mane).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/16-rick_ross_kodak_black_ball_greezy-diamonds_never_die-ad2075b6.mp3","OriginalFilename":"16-rick_ross_kodak_black_ball_greezy-diamonds_never_die-ad2075b6.mp3","normalizedFilename":"16. Diamonds Never Die (with Kodak Black \u0026 ball greezy).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/17-rick_ross_yung_miami-shes_my_star-b7557dfa.mp3","OriginalFilename":"17-rick_ross_yung_miami-shes_my_star-b7557dfa.mp3","normalizedFilename":"17. She's My Star (with Yung Miami).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/18-rick_ross_young_breed_dj_nasty-do_it_one_time-0657f90a.mp3","OriginalFilename":"18-rick_ross_young_breed_dj_nasty-do_it_one_time-0657f90a.mp3","normalizedFilename":"18. Do It One Time (with Young Breed \u0026 DJ Nasty).mp3"}
-Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/(2026) Set In Stone/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/19-rick_ross-the_algorithm-52a4f852.mp3","OriginalFilename":"19-rick_ross-the_algorithm-52a4f852.mp3","normalizedFilename":"19. The Algorithm.mp3"}
-Rename()|a.DestDir: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick_Ross-Set_In_Stone-WEB-2026-ENRiCH/
-Rename()|a.DestDir: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross
+Directories to process, {"dirnames":"[/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2]"}
+dirI: 0, dir: /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK
+Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK/(2026) In Your Name b+w Pray Web/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK/01-vana-in_your_name-fkk.mp3","OriginalFilename":"01-vana-in_your_name-fkk.mp3","normalizedFilename":"01. In Your Name.mp3"}
+Renaming file, {"DestDir":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK/(2026) In Your Name b+w Pray Web/","OriginalFilePath":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK/02-vana-pray-fkk.mp3","OriginalFilename":"02-vana-pray-fkk.mp3","normalizedFilename":"02. Pray.mp3"}
+Rename()|a.DestDir: /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana-In_Your_Name_bw_Pray-Web-2026-FKK/
+Rename()|a.DestDir: /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana
 
 ----------------------------------------------------------------------------------------------------------------------------------
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 214.64816326530612 01. Caviar Bumps.mp3 Caviar Bumps}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 213.4726530612245 02. Mahogany Caskets (with T.I.).mp3 Mahogany Caskets (with T.I.)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 170.84081632653061 03. Minks In Miami (with French Montana \u0026 Max B).mp3 Minks In Miami (with French Montana \u0026 Max B)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 238.21061224489796 04. Face Down (with Rich the kid).mp3 Face Down (with Rich the kid)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 241.39755102040817 05. Ring Around The Rolls (with YFN Lucci).mp3 Ring Around The Rolls (with YFN Lucci)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 205.97551020408164 06. Camel Meat (with Deon Cole).mp3 Camel Meat (with Deon Cole)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 292.6497959183674 07. Maybach Music VII (with Jeezy \u0026 Don Toliver).mp3 Maybach Music VII (with Jeezy \u0026 Don Toliver)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 148.5844897959184 08. Living Large (with BigXthaPlug).mp3 Living Large (with BigXthaPlug)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 170.18775510204082 09. Purple Fentanyl.mp3 Purple Fentanyl}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 177.9722448979592 10. 23.mp3 #23}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 157.02204081632652 11. Porsche GT3 - RS.mp3 Porsche GT3 - RS}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 187.5591836734694 12. City Lights (with The-Dream).mp3 City Lights (with The-Dream)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 162.6383673469388 13. Chain of Command (with Nino Breeze \u0026 Big Tony).mp3 Chain of Command (with Nino Breeze \u0026 Big Tony)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 226.97795918367348 14. Remarkable Hussle (with Leon Thomas).mp3 Remarkable Hussle (with Leon Thomas)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 235.46775510204083 15. Big Fish (with Gucci Mane).mp3 Big Fish (with Gucci Mane)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 271.54285714285714 16. Diamonds Never Die (with Kodak Black \u0026 ball greezy).mp3 Diamonds Never Die (with Kodak Black \u0026 ball greezy)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 143.88244897959183 17. She's My Star (with Yung Miami).mp3 She's My Star (with Yung Miami)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 225.6718367346939 18. Do It One Time (with Young Breed \u0026 DJ Nasty).mp3 Do It One Time (with Young Breed \u0026 DJ Nasty)}"}
-Adding song to playlist, {"playlistSong":"\u0026{Rick Ross Set In Stone 226.35102040816327 19. The Algorithm.mp3 The Algorithm}"}
-Creating playlist with values from the first file in directory, {"filename":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/Rick Ross - Set In Stone.m3u","playlistSong[0]":"{Rick Ross Set In Stone 214.64816326530612 01. Caviar Bumps.mp3 Caviar Bumps}"}
+Adding song to playlist, {"playlistSong":"\u0026{Vana In Your Name b/w Pray Web 282.174693877551 01. In Your Name.mp3 In Your Name}"}
+Adding song to playlist, {"playlistSong":"\u0026{Vana In Your Name b/w Pray Web 209.2930612244898 02. Pray.mp3 Pray}"}
+Creating playlist with values from the first file in directory, {"filename":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana/(2026) In Your Name b+w Pray Web/Vana - In Your Name b+w Pray Web.m3u","playlistSong[0]":"{Vana In Your Name b/w Pray Web 282.174693877551 01. In Your Name.mp3 In Your Name}"}
 
 ----------------------------------------------------------------------------------------------------------------------------------
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/01. Caviar Bumps.mp3
-ID   | Name           | Value        | Type                | Extra                        | V1.Name | V1.Value     
-TIT2 | Title          | Caviar Bumps | *id3v2.TextFrame    |                              | Title   | Caviar Bumps 
-TPE1 | Artist         | Rick Ross    | *id3v2.TextFrame    |                              | Artist  | Rick Ross    
-TRCK | Track Number   | 1            | *id3v2.TextFrame    |                              | Track   | 1            
-TALB | Album          | Set In Stone | *id3v2.TextFrame    |                              | Album   | Set In Stone 
-TDRC | Recording Time | 2026         | *id3v2.TextFrame    |                              | Year    | 2026         
-TPE2 | Album Artist   | Rick Ross    | *id3v2.TextFrame    |                              |         |              
-APIC | Picture        | Cover        | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |              
-TCON | Genre          |              |                     |                              | Genre   | 255          
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/02. Mahogany Caskets (with T.I.).mp3
-ID   | Name           | Value                        | Type                | Extra                        | V1.Name | V1.Value                     
-TIT2 | Title          | Mahogany Caskets (with T.I.) | *id3v2.TextFrame    |                              | Title   | Mahogany Caskets (with T.I.) 
-TPE1 | Artist         | Rick Ross                    | *id3v2.TextFrame    |                              | Artist  | Rick Ross                    
-TRCK | Track Number   | 2                            | *id3v2.TextFrame    |                              | Track   | 2                            
-TALB | Album          | Set In Stone                 | *id3v2.TextFrame    |                              | Album   | Set In Stone                 
-TDRC | Recording Time | 2026                         | *id3v2.TextFrame    |                              | Year    | 2026                         
-TPE2 | Album Artist   | Rick Ross                    | *id3v2.TextFrame    |                              |         |                              
-APIC | Picture        | Cover                        | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                              
-TCON | Genre          |                              |                     |                              | Genre   | 255                          
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/03. Minks In Miami (with French Montana & Max B).mp3
-ID   | Name           | Value                                        | Type                | Extra                        | V1.Name | V1.Value                                     
-TIT2 | Title          | Minks In Miami (with French Montana & Max B) | *id3v2.TextFrame    |                              | Title   | Minks In Miami (with French Montana & Max B) 
-TPE1 | Artist         | Rick Ross                                    | *id3v2.TextFrame    |                              | Artist  | Rick Ross                                    
-TRCK | Track Number   | 3                                            | *id3v2.TextFrame    |                              | Track   | 3                                            
-TALB | Album          | Set In Stone                                 | *id3v2.TextFrame    |                              | Album   | Set In Stone                                 
-TDRC | Recording Time | 2026                                         | *id3v2.TextFrame    |                              | Year    | 2026                                         
-TPE2 | Album Artist   | Rick Ross                                    | *id3v2.TextFrame    |                              |         |                                              
-APIC | Picture        | Cover                                        | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                                              
-TCON | Genre          |                                              |                     |                              | Genre   | 255                                          
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/04. Face Down (with Rich the kid).mp3
-ID   | Name           | Value                         | Type                | Extra                        | V1.Name | V1.Value                      
-TIT2 | Title          | Face Down (with Rich the kid) | *id3v2.TextFrame    |                              | Title   | Face Down (with Rich the kid) 
-TPE1 | Artist         | Rick Ross                     | *id3v2.TextFrame    |                              | Artist  | Rick Ross                     
-TRCK | Track Number   | 4                             | *id3v2.TextFrame    |                              | Track   | 4                             
-TALB | Album          | Set In Stone                  | *id3v2.TextFrame    |                              | Album   | Set In Stone                  
-TDRC | Recording Time | 2026                          | *id3v2.TextFrame    |                              | Year    | 2026                          
-TPE2 | Album Artist   | Rick Ross                     | *id3v2.TextFrame    |                              |         |                               
-APIC | Picture        | Cover                         | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                               
-TCON | Genre          |                               |                     |                              | Genre   | 255                           
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/05. Ring Around The Rolls (with YFN Lucci).mp3
-ID   | Name           | Value                                  | Type                | Extra                        | V1.Name | V1.Value                               
-TIT2 | Title          | Ring Around The Rolls (with YFN Lucci) | *id3v2.TextFrame    |                              | Title   | Ring Around The Rolls (with YFN Lucci) 
-TPE1 | Artist         | Rick Ross                              | *id3v2.TextFrame    |                              | Artist  | Rick Ross                              
-TRCK | Track Number   | 5                                      | *id3v2.TextFrame    |                              | Track   | 5                                      
-TALB | Album          | Set In Stone                           | *id3v2.TextFrame    |                              | Album   | Set In Stone                           
-TDRC | Recording Time | 2026                                   | *id3v2.TextFrame    |                              | Year    | 2026                                   
-TPE2 | Album Artist   | Rick Ross                              | *id3v2.TextFrame    |                              |         |                                        
-APIC | Picture        | Cover                                  | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                                        
-TCON | Genre          |                                        |                     |                              | Genre   | 255                                    
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/06. Camel Meat (with Deon Cole).mp3
-ID   | Name           | Value                       | Type                | Extra                        | V1.Name | V1.Value                    
-TIT2 | Title          | Camel Meat (with Deon Cole) | *id3v2.TextFrame    |                              | Title   | Camel Meat (with Deon Cole) 
-TPE1 | Artist         | Rick Ross                   | *id3v2.TextFrame    |                              | Artist  | Rick Ross                   
-TRCK | Track Number   | 6                           | *id3v2.TextFrame    |                              | Track   | 6                           
-TALB | Album          | Set In Stone                | *id3v2.TextFrame    |                              | Album   | Set In Stone                
-TDRC | Recording Time | 2026                        | *id3v2.TextFrame    |                              | Year    | 2026                        
-TPE2 | Album Artist   | Rick Ross                   | *id3v2.TextFrame    |                              |         |                             
-APIC | Picture        | Cover                       | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                             
-TCON | Genre          |                             |                     |                              | Genre   | 255                         
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/07. Maybach Music VII (with Jeezy & Don Toliver).mp3
-ID   | Name           | Value                                        | Type                | Extra                        | V1.Name | V1.Value                                     
-TIT2 | Title          | Maybach Music VII (with Jeezy & Don Toliver) | *id3v2.TextFrame    |                              | Title   | Maybach Music VII (with Jeezy & Don Toliver) 
-TPE1 | Artist         | Rick Ross                                    | *id3v2.TextFrame    |                              | Artist  | Rick Ross                                    
-TRCK | Track Number   | 7                                            | *id3v2.TextFrame    |                              | Track   | 7                                            
-TALB | Album          | Set In Stone                                 | *id3v2.TextFrame    |                              | Album   | Set In Stone                                 
-TDRC | Recording Time | 2026                                         | *id3v2.TextFrame    |                              | Year    | 2026                                         
-TPE2 | Album Artist   | Rick Ross                                    | *id3v2.TextFrame    |                              |         |                                              
-APIC | Picture        | Cover                                        | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                                              
-TCON | Genre          |                                              |                     |                              | Genre   | 255                                          
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/08. Living Large (with BigXthaPlug).mp3
-ID   | Name           | Value                           | Type                | Extra                        | V1.Name | V1.Value                        
-TIT2 | Title          | Living Large (with BigXthaPlug) | *id3v2.TextFrame    |                              | Title   | Living Large (with BigXthaPlug) 
-TPE1 | Artist         | Rick Ross                       | *id3v2.TextFrame    |                              | Artist  | Rick Ross                       
-TRCK | Track Number   | 8                               | *id3v2.TextFrame    |                              | Track   | 8                               
-TALB | Album          | Set In Stone                    | *id3v2.TextFrame    |                              | Album   | Set In Stone                    
-TDRC | Recording Time | 2026                            | *id3v2.TextFrame    |                              | Year    | 2026                            
-TPE2 | Album Artist   | Rick Ross                       | *id3v2.TextFrame    |                              |         |                                 
-APIC | Picture        | Cover                           | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                                 
-TCON | Genre          |                                 |                     |                              | Genre   | 255                             
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/09. Purple Fentanyl.mp3
-ID   | Name           | Value           | Type                | Extra                        | V1.Name | V1.Value        
-TIT2 | Title          | Purple Fentanyl | *id3v2.TextFrame    |                              | Title   | Purple Fentanyl 
-TPE1 | Artist         | Rick Ross       | *id3v2.TextFrame    |                              | Artist  | Rick Ross       
-TRCK | Track Number   | 9               | *id3v2.TextFrame    |                              | Track   | 9               
-TALB | Album          | Set In Stone    | *id3v2.TextFrame    |                              | Album   | Set In Stone    
-TDRC | Recording Time | 2026            | *id3v2.TextFrame    |                              | Year    | 2026            
-TPE2 | Album Artist   | Rick Ross       | *id3v2.TextFrame    |                              |         |                 
-APIC | Picture        | Cover           | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                 
-TCON | Genre          |                 |                     |                              | Genre   | 255             
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/10. 23.mp3
-ID   | Name           | Value        | Type                | Extra                        | V1.Name | V1.Value     
-TIT2 | Title          | #23          | *id3v2.TextFrame    |                              | Title   | #23          
-TPE1 | Artist         | Rick Ross    | *id3v2.TextFrame    |                              | Artist  | Rick Ross    
-TRCK | Track Number   | 10           | *id3v2.TextFrame    |                              | Track   | 10           
-TALB | Album          | Set In Stone | *id3v2.TextFrame    |                              | Album   | Set In Stone 
-TDRC | Recording Time | 2026         | *id3v2.TextFrame    |                              | Year    | 2026         
-TPE2 | Album Artist   | Rick Ross    | *id3v2.TextFrame    |                              |         |              
-APIC | Picture        | Cover        | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |              
-TCON | Genre          |              |                     |                              | Genre   | 255          
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/11. Porsche GT3 - RS.mp3
-ID   | Name           | Value            | Type                | Extra                        | V1.Name | V1.Value         
-TIT2 | Title          | Porsche GT3 - RS | *id3v2.TextFrame    |                              | Title   | Porsche GT3 - RS 
-TPE1 | Artist         | Rick Ross        | *id3v2.TextFrame    |                              | Artist  | Rick Ross        
-TRCK | Track Number   | 11               | *id3v2.TextFrame    |                              | Track   | 11               
-TALB | Album          | Set In Stone     | *id3v2.TextFrame    |                              | Album   | Set In Stone     
-TDRC | Recording Time | 2026             | *id3v2.TextFrame    |                              | Year    | 2026             
-TPE2 | Album Artist   | Rick Ross        | *id3v2.TextFrame    |                              |         |                  
-APIC | Picture        | Cover            | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                  
-TCON | Genre          |                  |                     |                              | Genre   | 255              
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/12. City Lights (with The-Dream).mp3
-ID   | Name           | Value                        | Type                | Extra                        | V1.Name | V1.Value                     
-TIT2 | Title          | City Lights (with The-Dream) | *id3v2.TextFrame    |                              | Title   | City Lights (with The-Dream) 
-TPE1 | Artist         | Rick Ross                    | *id3v2.TextFrame    |                              | Artist  | Rick Ross                    
-TRCK | Track Number   | 12                           | *id3v2.TextFrame    |                              | Track   | 12                           
-TALB | Album          | Set In Stone                 | *id3v2.TextFrame    |                              | Album   | Set In Stone                 
-TDRC | Recording Time | 2026                         | *id3v2.TextFrame    |                              | Year    | 2026                         
-TPE2 | Album Artist   | Rick Ross                    | *id3v2.TextFrame    |                              |         |                              
-APIC | Picture        | Cover                        | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                              
-TCON | Genre          |                              |                     |                              | Genre   | 255                          
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/13. Chain of Command (with Nino Breeze & Big Tony).mp3
-ID   | Name           | Value                                          | Type                | Extra                        | V1.Name | V1.Value                                       
-TIT2 | Title          | Chain of Command (with Nino Breeze & Big Tony) | *id3v2.TextFrame    |                              | Title   | Chain of Command (with Nino Breeze & Big Tony) 
-TPE1 | Artist         | Rick Ross                                      | *id3v2.TextFrame    |                              | Artist  | Rick Ross                                      
-TRCK | Track Number   | 13                                             | *id3v2.TextFrame    |                              | Track   | 13                                             
-TALB | Album          | Set In Stone                                   | *id3v2.TextFrame    |                              | Album   | Set In Stone                                   
-TDRC | Recording Time | 2026                                           | *id3v2.TextFrame    |                              | Year    | 2026                                           
-TPE2 | Album Artist   | Rick Ross                                      | *id3v2.TextFrame    |                              |         |                                                
-APIC | Picture        | Cover                                          | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                                                
-TCON | Genre          |                                                |                     |                              | Genre   | 255                                            
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/14. Remarkable Hussle (with Leon Thomas).mp3
-ID   | Name           | Value                                | Type                | Extra                        | V1.Name | V1.Value                             
-TIT2 | Title          | Remarkable Hussle (with Leon Thomas) | *id3v2.TextFrame    |                              | Title   | Remarkable Hussle (with Leon Thomas) 
-TPE1 | Artist         | Rick Ross                            | *id3v2.TextFrame    |                              | Artist  | Rick Ross                            
-TRCK | Track Number   | 14                                   | *id3v2.TextFrame    |                              | Track   | 14                                   
-TALB | Album          | Set In Stone                         | *id3v2.TextFrame    |                              | Album   | Set In Stone                         
-TDRC | Recording Time | 2026                                 | *id3v2.TextFrame    |                              | Year    | 2026                                 
-TPE2 | Album Artist   | Rick Ross                            | *id3v2.TextFrame    |                              |         |                                      
-APIC | Picture        | Cover                                | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                                      
-TCON | Genre          |                                      |                     |                              | Genre   | 255                                  
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/15. Big Fish (with Gucci Mane).mp3
-ID   | Name           | Value                      | Type                | Extra                        | V1.Name | V1.Value                   
-TIT2 | Title          | Big Fish (with Gucci Mane) | *id3v2.TextFrame    |                              | Title   | Big Fish (with Gucci Mane) 
-TPE1 | Artist         | Rick Ross                  | *id3v2.TextFrame    |                              | Artist  | Rick Ross                  
-TRCK | Track Number   | 15                         | *id3v2.TextFrame    |                              | Track   | 15                         
-TALB | Album          | Set In Stone               | *id3v2.TextFrame    |                              | Album   | Set In Stone               
-TDRC | Recording Time | 2026                       | *id3v2.TextFrame    |                              | Year    | 2026                       
-TPE2 | Album Artist   | Rick Ross                  | *id3v2.TextFrame    |                              |         |                            
-APIC | Picture        | Cover                      | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                            
-TCON | Genre          |                            |                     |                              | Genre   | 255                        
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/16. Diamonds Never Die (with Kodak Black & ball greezy).mp3
-ID   | Name           | Value                                               | Type                | Extra                        | V1.Name | V1.Value                                            
-TIT2 | Title          | Diamonds Never Die (with Kodak Black & ball greezy) | *id3v2.TextFrame    |                              | Title   | Diamonds Never Die (with Kodak Black & ball greezy) 
-TPE1 | Artist         | Rick Ross                                           | *id3v2.TextFrame    |                              | Artist  | Rick Ross                                           
-TRCK | Track Number   | 16                                                  | *id3v2.TextFrame    |                              | Track   | 16                                                  
-TALB | Album          | Set In Stone                                        | *id3v2.TextFrame    |                              | Album   | Set In Stone                                        
-TDRC | Recording Time | 2026                                                | *id3v2.TextFrame    |                              | Year    | 2026                                                
-TPE2 | Album Artist   | Rick Ross                                           | *id3v2.TextFrame    |                              |         |                                                     
-APIC | Picture        | Cover                                               | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                                                     
-TCON | Genre          |                                                     |                     |                              | Genre   | 255                                                 
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/17. She's My Star (with Yung Miami).mp3
-ID   | Name           | Value                           | Type                | Extra                        | V1.Name | V1.Value                        
-TIT2 | Title          | She's My Star (with Yung Miami) | *id3v2.TextFrame    |                              | Title   | She's My Star (with Yung Miami) 
-TPE1 | Artist         | Rick Ross                       | *id3v2.TextFrame    |                              | Artist  | Rick Ross                       
-TRCK | Track Number   | 17                              | *id3v2.TextFrame    |                              | Track   | 17                              
-TALB | Album          | Set In Stone                    | *id3v2.TextFrame    |                              | Album   | Set In Stone                    
-TDRC | Recording Time | 2026                            | *id3v2.TextFrame    |                              | Year    | 2026                            
-TPE2 | Album Artist   | Rick Ross                       | *id3v2.TextFrame    |                              |         |                                 
-APIC | Picture        | Cover                           | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                                 
-TCON | Genre          |                                 |                     |                              | Genre   | 255                             
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/18. Do It One Time (with Young Breed & DJ Nasty).mp3
-ID   | Name           | Value                                        | Type                | Extra                        | V1.Name | V1.Value                                     
-TIT2 | Title          | Do It One Time (with Young Breed & DJ Nasty) | *id3v2.TextFrame    |                              | Title   | Do It One Time (with Young Breed & DJ Nasty) 
-TPE1 | Artist         | Rick Ross                                    | *id3v2.TextFrame    |                              | Artist  | Rick Ross                                    
-TRCK | Track Number   | 18                                           | *id3v2.TextFrame    |                              | Track   | 18                                           
-TALB | Album          | Set In Stone                                 | *id3v2.TextFrame    |                              | Album   | Set In Stone                                 
-TDRC | Recording Time | 2026                                         | *id3v2.TextFrame    |                              | Year    | 2026                                         
-TPE2 | Album Artist   | Rick Ross                                    | *id3v2.TextFrame    |                              |         |                                              
-APIC | Picture        | Cover                                        | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |                                              
-TCON | Genre          |                                              |                     |                              | Genre   | 255                                          
-
-/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/19. The Algorithm.mp3
-ID   | Name           | Value         | Type                | Extra                        | V1.Name | V1.Value      
-TIT2 | Title          | The Algorithm | *id3v2.TextFrame    |                              | Title   | The Algorithm 
-TPE1 | Artist         | Rick Ross     | *id3v2.TextFrame    |                              | Artist  | Rick Ross     
-TRCK | Track Number   | 19            | *id3v2.TextFrame    |                              | Track   | 19            
-TALB | Album          | Set In Stone  | *id3v2.TextFrame    |                              | Album   | Set In Stone  
-TDRC | Recording Time | 2026          | *id3v2.TextFrame    |                              | Year    | 2026          
-TPE2 | Album Artist   | Rick Ross     | *id3v2.TextFrame    |                              |         |               
-APIC | Picture        | Cover         | *id3v2.PictureFrame | PictureFrame.MIME=image/jpeg |         |               
-TCON | Genre          |               |                     |                              | Genre   | 255           
-
-Starting, {"dir":"/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/","outFilenameOpt":"[window]"}
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/01. Caviar Bumps.mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/02. Mahogany Caskets (with T.I.).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/03. Minks In Miami (with French Montana & Max B).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/04. Face Down (with Rich the kid).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/05. Ring Around The Rolls (with YFN Lucci).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/06. Camel Meat (with Deon Cole).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/07. Maybach Music VII (with Jeezy & Don Toliver).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/08. Living Large (with BigXthaPlug).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/09. Purple Fentanyl.mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/10. 23.mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/11. Porsche GT3 - RS.mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/12. City Lights (with The-Dream).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/13. Chain of Command (with Nino Breeze & Big Tony).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/14. Remarkable Hussle (with Leon Thomas).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/15. Big Fish (with Gucci Mane).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/16. Diamonds Never Die (with Kodak Black & ball greezy).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/17. She's My Star (with Yung Miami).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/18. Do It One Time (with Young Breed & DJ Nasty).mp3
-mp3File: /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiofiles/Rick Ross/(2026) Set In Stone/19. The Algorithm.mp3
-len(outFilennameOpt): 1, outFilenameOpt[0]: window
-totalW: 1544.468750, totalH: 918.796875, ptLen: 32.000000
-minW: 80.000000, minH: 10.000000, maxW: 2560.000000, maxH: 1440.000000
-totalW: 1596.468750, totalH: 950.796875
-Done Show()
+Starting, {"dir":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana/(2026) In Your Name b+w Pray Web/","outFilenameOpt":"[window false]"}
+mp3File: /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana/(2026) In Your Name b+w Pray Web/01. In Your Name.mp3
+mp3File: /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2/Vana/(2026) In Your Name b+w Pray Web/02. Pray.mp3
+buildTagTable()|cImg.Filename: embedded
+coverImage()|cImg.Filename: embedded
+ActionSelectEntry()|start
+NewActionSelectEntry()|start
+totalW: 1367.328125, totalH: 422.468750, ptLen: 15.000000
+minW: 170.666672, minH: 10.000000, maxW: 2560.000000, maxH: 1440.000000
+totalW: 1419.328125, totalH: 454.468750
 
 ----------------------------------------------------------------------------------------------------------------------------------
-closeBtn
-Winman.Run()|done
+dirI: 1, dir: /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2
+ERROR: filing.LsEntryName()|nothing to process, map[string]string{"dir":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana2", "filename":".*\\.mp3"}
+Rename()|a.DestDir: 
+Rename()|a.DestDir: 
+
+----------------------------------------------------------------------------------------------------------------------------------
 + echo done
 done

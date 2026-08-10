@@ -163,8 +163,10 @@ github.com/mattn/go-runewidth v0.0.24 h1:cpokDiIn0MGnhdHwuWnJBITySJ20QyNGnY2kR/a
 github.com/mattn/go-runewidth v0.0.24/go.mod h1:XBkDxAl56ILZc9knddidhrOlY5R/pDhgLpndooCuJAs=
 github.com/mholt/archives v0.1.5 h1:Fh2hl1j7VEhc6DZs2DLMgiBNChUux154a1G+2esNvzQ=
 github.com/mholt/archives v0.1.5/go.mod h1:3TPMmBLPsgszL+1As5zECTuKwKvIfj6YcwWPpeTAXF4=
-github.com/michaeluuong/utilize v0.0.0-20260806211038-0035229851dc h1:bjAUX9yeAqC5FPZ+YzaX2CJEl1aNtynta78h3ec+brk=
-github.com/michaeluuong/utilize v0.0.0-20260806211038-0035229851dc/go.mod h1:2wsgBYJX0DcLFTkOzzddN+xITnOMJf2q0EU+TsmVsTE=
+github.com/michaeluuong/config v0.0.0-20260810183944-136fa4449b21 h1:bxr2vjN4udIoboEwpcIpIXsKN4VXoB/qBWqop6Ohyac=
+github.com/michaeluuong/config v0.0.0-20260810183944-136fa4449b21/go.mod h1:AexC2n7m9SutIVO0jOVWlc8vEl3Z5Q3e9gc6gSuQinc=
+github.com/michaeluuong/utilize v0.0.0-20260807011659-fda22c051df6 h1:3uiiQCiAiKN2IM31SxCBzX1tjAubALmCpWV9wudaU6c=
+github.com/michaeluuong/utilize v0.0.0-20260807011659-fda22c051df6/go.mod h1:2wsgBYJX0DcLFTkOzzddN+xITnOMJf2q0EU+TsmVsTE=
 github.com/mikelolasagasti/xz v1.0.1 h1:Q2F2jX0RYJUG3+WsM+FJknv+6eVjsjXNDV0KJXZzkD0=
 github.com/mikelolasagasti/xz v1.0.1/go.mod h1:muAirjiOUxPRXwm9HdDtB3uoRPrGnL85XHtokL9Hcgc=
 github.com/minio/minlz v1.0.1 h1:OUZUzXcib8diiX+JYxyRLIdomyZYzHct6EShOKtQY2A=

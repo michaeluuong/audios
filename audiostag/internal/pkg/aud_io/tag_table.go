@@ -163,7 +163,6 @@ func (t *TagTableData) measureColumnWidths() []float32 {
 }
 
 type TagTableDataAppState struct {
-	//textField    *widget.Entry
 	selectedCell *widget.TableCellID
 	selectedText string
 	headerText   string
@@ -171,31 +170,28 @@ type TagTableDataAppState struct {
 
 // ShowPipeTableWindow opens a resizable window with a scrollable, selectable table.
 // It sizes itself to the content (capped by the screen) but remains user-resizable.
-// func (t *Table) Show(title string, data [][]string, img image.Image) {
-// func ShowTagTable(filePath string, data [][]string, img image.Image, win fyne.Window, showActions bool) {
-func ShowTagTable(filePath string, data [][]string, cImg CoverImage, win fyne.Window, showActions bool) {
-	//a := fyne.CurrentApp()
+//   - filePath is the full path to the data
+//   - data is a table of all tags to display
+//   - cImg is the cover image
+//   - win is the window to display this table
+//   - showActions is true to display tagging options or false if display only
+//   - hasCompleted is true if a round of tagging has already been completed false otherwise
+func ShowTagTable(filePath string, data [][]string, cImg CoverImage, win fyne.Window, showActions bool, hasCompleted bool) {
 	//t := &TagTableData{Headers: data[0][1:], Rows: data[1:], Data: data}
 	t := NewTagTableData(data)
 
-	//win := a.NewWindow("audiostag")
 	fyne.DoAndWait(func() {
 		//t.Headers, t.Rows = data[0], data[1:]
-		win.SetContent(buildTagTable(win, filePath, t, cImg, showActions))
+		win.SetContent(buildTagTable(win, filePath, t, cImg, showActions, hasCompleted))
 
 		win.Resize(t.preferredWindowSize())
 		win.CenterOnScreen()
-		//w.ShowAndRun()
 		win.Show()
 	})
 
-	//a.Run()
-
 }
 
-// func (t *Table) buildTab*leContent(win fyne.Window, title string, img image.Image) fyne.CanvasObject {
-// func buildTagTable(win fyne.Window, filePath string, tagTableData TagTableData, img image.Image, showActions bool) fyne.CanvasObject {
-func buildTagTable(win fyne.Window, filePath string, tagTableData *TagTableData, cImg CoverImage, showActions bool) fyne.CanvasObject {
+func buildTagTable(win fyne.Window, filePath string, tagTableData *TagTableData, cImg CoverImage, showActions bool, hasCompleted bool) fyne.CanvasObject {
 	if len(tagTableData.Headers) == 0 {
 		tagTableData.Headers = []string{""}
 
@@ -324,7 +320,7 @@ func buildTagTable(win fyne.Window, filePath string, tagTableData *TagTableData,
 	var selectEntry *ActionSelectEntry
 	if showActions {
 		//selectEntry = SelectEntry(win, filePath, tagTableDataAppState)
-		selectEntry = ActionSelect(win, filePath)
+		selectEntry = ActionSelect(win, filePath, hasCompleted)
 		selectEntryClose := container.NewBorder(selectEntry.actionContainer, closeBtn, nil, nil, nil)
 		bottomContainer = container.NewPadded(selectEntryClose)
 
@@ -422,10 +418,7 @@ func DesktopDimensions() (float32, float32) {
 
 }
 
-func ActionSelect(win fyne.Window, filePath string) *ActionSelectEntry {
-	fmt.Printf("ActionSelectEntry()|start\n")
-	//textEntry := widget.NewEntry()
-
+func ActionSelect(win fyne.Window, filePath string, hasCompleted bool) *ActionSelectEntry {
 	actions := []*ActionEntry{
 		{
 			name:         "Album Folder",
@@ -463,8 +456,8 @@ func ActionSelect(win fyne.Window, filePath string) *ActionSelectEntry {
 			placeHolders: []placeHolder{{desc: "playlist name"}},
 			isSingle:     true,
 		}, {
-			name:   "Pre Condition",
-			action: "--pre-condition",
+			name:   "Precondition",
+			action: "--precondition",
 			placeHolders: []placeHolder{
 				{desc: "src tag", isHead: true},
 				{desc: "regex"},
@@ -473,8 +466,8 @@ func ActionSelect(win fyne.Window, filePath string) *ActionSelectEntry {
 				{desc: "else value"},
 			},
 		}, {
-			name:   "Pre Replace",
-			action: "--pre-replace",
+			name:   "Prereplace",
+			action: "--prereplace",
 			placeHolders: []placeHolder{
 				{desc: "tag", isHead: true},
 				{desc: "regex"},
@@ -509,7 +502,7 @@ func ActionSelect(win fyne.Window, filePath string) *ActionSelectEntry {
 		},
 	}
 
-	actionSelect := NewActionSelectEntry(win, filePath, actions, "Choose or type")
+	actionSelect := NewActionSelectEntry(win, filePath, actions, "Choose or type", hasCompleted)
 
 	return actionSelect
 

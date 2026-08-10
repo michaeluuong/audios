@@ -30,6 +30,12 @@ const lineLength = 130
 var audiostagConfig, _ = a_global.FromConfigMan()
 
 type PflagArgs struct {
+	dirFlag            *string
+	extractExcludeFlag *string
+	fileFlag           *string
+	outFlag            *string
+	pathFlag           *string
+
 	preConditionsFlag *string
 	preReplaceFlag    *string
 	replaceFlag       *string
@@ -42,12 +48,8 @@ type PflagArgs struct {
 	coverAlbumFlag      *string
 	coverFlag           *string
 	coverSourceFlag     *string
-	dirFlag             *string
-	extractExcludeFlag  *string
-	fileFlag            *string
 	multiDiscFlag       *string
-	outFlag             *string
-	pathFlag            *string
+	noArtistSplit       *bool
 	playlistNameFlag    *string
 	singleArtistFlag    *string
 	variousFlag         *string
@@ -56,15 +58,19 @@ type PflagArgs struct {
 	dummyFilesFlag      *bool
 	extractFlag         *bool
 	listFlag            *bool
-	noArtistSplit       *bool
 	noDirectoryRename   *bool
 	playlistFlag        *bool
 	printTagsFlag       *bool
 	setDefaultTagsFlag  *bool
 	showArchiveTagsFlag *bool
 	showTagsFlag        *bool
-	testFlag            *bool
-	intFlag             *int
+	showTagsChooserFlag *bool
+
+	createExtractArchiveShortcutFlag *bool
+	createShowTagsShortcutFlag       *bool
+
+	testFlag *bool
+	intFlag  *int
 }
 
 func (p PflagArgs) String() string {
@@ -73,24 +79,26 @@ func (p PflagArgs) String() string {
 }
 
 var pArg = PflagArgs{
-	preConditionsFlag: pflag.String("pre-condition", "", "set a tag if this condition is present else use that condition [Title= (Remastered)=Disc Number=1/2=2/2]"),
-	preReplaceFlag:    pflag.String("pre-replace", "", "perform this replacement at the beginning of process [field=regexp=replace~...]"),
+	dirFlag:            pflag.StringP("dir", "d", "", "directory"),
+	extractExcludeFlag: pflag.String("extract-exclude", "", "exclude this file or regular expression from being extracted"),
+	fileFlag:           pflag.StringP("file", "f", "", "file expression"),
+	outFlag:            pflag.StringP("out", "o", "", "write output here [file, window]"),
+	pathFlag:           pflag.String("path", "p", "full path to the file"),
+
+	preConditionsFlag: pflag.String("precondition", "", "set a tag if this condition is present else use that condition [Title= (Remastered)=Disc Number=1/2=2/2]"),
+	preReplaceFlag:    pflag.String("prereplace", "", "perform this replacement at the beginning of process [tag=regexp=replace~...]"),
 	replaceFlag:       pflag.StringP("replace", "r", "", "replace text in existing field [field=regexp=replace~...] (e.g. album=(Deluxe)=~title=ft.=feat)"),
 	tagFlag:           pflag.StringP("tag", "t", "", "swap tag content with text [tag_field=value~...] (e.g. genre=Pop~artist=Tool~APIC=path/URL)"),
-	keepTagFlag:       pflag.StringP("keep-tag", "k", "", "do not remove the tag [tag_field] (e.g. TCOM)"),
+	keepTagFlag:       pflag.StringP("keep-tag", "k", "", "do not remove the tag [tag_field~tag_field2~...] (e.g. TCOM)"),
 
 	albumFolderNameFlag: pflag.String("album-folder-name", "", ""),
 	caseFlag:            pflag.String("case", "", "string case of Title, Artis & Album fields [Title, Lower, Upper]"),
-	fileFlag:            pflag.StringP("file", "f", "", "file expression"),
 	coverAlbumFlag:      pflag.String("cover-album", "", "use album to search for cover art musicbrainz/coverartarchive"),
 	coverArtistFlag:     pflag.String("cover-artist", "", "use artist to search for cover art in musicbrainz/coverartarchive"),
 	coverFlag:           pflag.String("cover", "", "Artist|Album to get cover art and directory to place the file"),
 	coverSourceFlag:     pflag.StringP("cover-source", "c", "", "URL or path to cover art file (jpg|png)"),
-	extractExcludeFlag:  pflag.String("extract-exclude", "", "exclude this file or regular expression from being extracted"),
-	dirFlag:             pflag.StringP("dir", "d", "", "directory"),
 	multiDiscFlag:       pflag.String("multi-disc", "", "multi-disc, [true|false]"),
-	outFlag:             pflag.StringP("out", "o", "", "write output here [file, window]"),
-	pathFlag:            pflag.String("path", "", "full path to the file"),
+	noArtistSplit:       pflag.Bool("no-artist-split", false, "do not split comma separated artists"),
 	playlistNameFlag:    pflag.String("playlist-name", "", "name of playlist"),
 	singleArtistFlag:    pflag.String("single-artist", "", "don't split apart comma-separated artist"),
 	variousFlag:         pflag.String("various", "", "various artists [true|false]"),
@@ -99,15 +107,19 @@ var pArg = PflagArgs{
 	dummyFilesFlag:      pflag.Bool("dummy-files", false, "copy archive into empty files"),
 	extractFlag:         pflag.BoolP("extract", "e", false, "extract files from archive, requires the path to the archive"),
 	listFlag:            pflag.BoolP("list", "l", false, "list the contents of archive, requires the path to the archive file"),
-	noArtistSplit:       pflag.Bool("no-artist-split", false, "do not split comma separated artists"),
 	noDirectoryRename:   pflag.Bool("no-directory-rename", false, "do not rename directories (i.e. artist/album)"),
-	playlistFlag:        pflag.BoolP("playlist", "p", false, "create an m3u playlist for all files in a directory"),
+	playlistFlag:        pflag.BoolP("playlist", "", false, "create an m3u playlist for all files in a directory"),
 	printTagsFlag:       pflag.Bool("print-tags", false, "display tags"),
 	setDefaultTagsFlag:  pflag.Bool("set-default-tags", false, "set tag(s) to default values for all mp3 files in a directory "),
 	showArchiveTagsFlag: pflag.BoolP("show-archive-tags", "s", false, "display tag information contained in an archive, requires directory and file"),
 	showTagsFlag:        pflag.Bool("show-tags", false, "display tag information, requires directory and file"),
-	testFlag:            pflag.Bool("test", false, "test something"),
-	intFlag:             pflag.IntP("int", "i", 0, "int message"),
+	showTagsChooserFlag: pflag.Bool("show-tags-chooser", false, "display tag information for a folder or archive"),
+
+	createExtractArchiveShortcutFlag: pflag.Bool("create-extract-archive-shortcut", false, "add a extract-archive shortcut to right-click context"),
+	createShowTagsShortcutFlag:       pflag.Bool("create-show-tags-shortcut", false, "add a show-tags shortcut to right-click context"),
+
+	testFlag: pflag.Bool("test", false, "test something"),
+	intFlag:  pflag.IntP("int", "i", 0, "int message"),
 }
 
 func init() {
@@ -146,7 +158,7 @@ func main() {
 	pflag.Parse()
 	slog.Info("Parse()", "pArg", fmt.Sprintf("%v\n", pArg), "pflag.Args()", pflag.Args())
 
-	var dir, filename, filePath string
+	var dir, filename, filePath, ext string
 	if len(pflag.Args()) > 0 {
 		if pflag.Arg(0) == "?" || strings.ToLower(pflag.Arg(0)) == "help" {
 			pflag.Usage = func() {
@@ -167,7 +179,14 @@ func main() {
 	// Use flag values over filePath argument while preferring --pathFlag over --dir and --file
 	if *pArg.pathFlag != "" {
 		filePath = *pArg.pathFlag
-		dir, filename = filepath.Split(filePath)
+		ext = filepath.Ext(filePath)
+		if ext == "" {
+			dir = filePath
+
+		} else {
+			dir, filename = filepath.Split(filePath)
+
+		}
 
 	} else {
 		if *pArg.dirFlag != "" {
@@ -186,13 +205,12 @@ func main() {
 		if !strings.Contains(filename, ".") {
 			dir = filepath.Join(dir, filename)
 
-		} else {
-			filePath = filepath.Join(dir, filename)
-
 		}
 
+		filePath = filepath.Join(dir, filename)
+
 	}
-	slog.Info("pflag", "filePath", filePath, "dir", dir, "filename", filename)
+	slog.Info("pflag", "filePath", filePath, "dir", dir, "filename", filename, "ext", ext)
 
 	winman := aud_io.GetWinmanInstance()
 
@@ -212,21 +230,36 @@ func main() {
 
 	}
 
+	if *pArg.showTagsChooserFlag {
+		slog.Info("--show-tags-chooser|show tags in directory or archive")
+		*pArg.showTagsFlag = true
+		if filename != "" {
+			ext := filepath.Ext(filename)
+			if ext == ".tar" {
+				*pArg.showTagsFlag = false
+				*pArg.showArchiveTagsFlag = true
+
+			} else if ext == ".mp3" {
+				*pArg.showTagsFlag = true
+
+			}
+
+		}
+
+	}
+
 	if *pArg.showTagsFlag {
 		slog.Info("--show-tags|print tags in dir", "dir", dir)
 
 		errChan := make(chan error, 1)
 		var myfunc = func() {
-			err := mp3.PrintTags(dir, *pArg.outFlag)
+			err := mp3.PrintTags(dir, *pArg.outFlag, "showActions")
 			errChan <- err
 
 		}
 
 		if *pArg.outFlag == "window" {
 			winman.Run(myfunc)
-			fmt.Printf("main().winman.Run()|done\n")
-			//winman.Quit()
-			fmt.Printf("main().winman.Quit() done\n")
 
 		} else {
 			myfunc()
@@ -286,9 +319,19 @@ func main() {
 
 		errChan := make(chan error, 1)
 		var myfunc = func() {
-			extractedDirs, err := archiver.ExtractArchive(ctx, filePath)
-			errChan <- err
-			slog.Debug("--album ExtractArchive()", "extractedDirs", extractedDirs, "err", err)
+			var extractedDirs map[string]bool
+			if filename != "" {
+				var err error
+				extractedDirs, err = archiver.ExtractArchive(ctx, filePath)
+				errChan <- err
+				slog.Debug("--album ExtractArchive()", "extractedDirs", extractedDirs, "err", err)
+
+			} else {
+				slog.Debug("directory|skipping extraction", "filename", filename)
+				extractedDirs = make(map[string]bool)
+
+			}
+
 			if len(extractedDirs) == 0 {
 				extractedDirs = map[string]bool{dir: true}
 
@@ -410,6 +453,16 @@ func main() {
 		slog.Info("--tag|-t setting tag(s)", "dir", dir, "tag=value", *pArg.tagFlag)
 
 		mp3.SetTagsDir(dir, tagAttributes)
+
+	} else if *pArg.createExtractArchiveShortcutFlag {
+		slog.Info("--create-extract-archive-shortcut|creating extract-archive shortcut")
+
+		CreateShortcut(extractArchiveSC)
+
+	} else if *pArg.createShowTagsShortcutFlag {
+		slog.Info("--create-show-tags-shortcut|creating show-tags shortcut")
+
+		CreateShortcut(showTagsSC)
 
 	}
 

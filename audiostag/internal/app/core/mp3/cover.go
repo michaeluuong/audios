@@ -349,11 +349,8 @@ func DownloadPicture(imageURL, dest, coverFilenameNoExt string) (string, error) 
 	// Decode the response into an image
 	img, _, err := image.Decode(resp.Body)
 	if err != nil {
-		if err != nil {
-			slog.Error("image.Decode()|could not decode image", "imageURL", imageURL, "coverFilenameNoExt", coverFilenameNoExt, "err", err)
-			return "", err
-
-		}
+		slog.Error("image.Decode()|could not decode image", "imageURL", imageURL, "coverFilenameNoExt", coverFilenameNoExt, "err", err)
+		return "", err
 
 	}
 

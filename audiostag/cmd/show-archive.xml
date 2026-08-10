@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WFWorkflowActions</key>
+	<array>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.runshellscript</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>Shell</key>
+				<string>/bin/sh</string>
+				<key>InputMode</key>
+				<string>as arguments</string>
+				<key>UUID</key>
+				<string>73C4867A-925E-4262-A372-ABBF0A545756</string>
+				<key>Script</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>{EXECUTABLE} --path "￼" {FLAGS}</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<!-- <key>{37, 1}</key> -->
+							<key>{LENGTH_TO_PLACEHOLDER}</key>
+							<dict>
+								<key>Type</key>
+								<string>ExtensionInput</string>
+								<key>Aggrandizements</key>
+								<array>
+									<dict>
+										<key>Type</key>
+										<string>WFCoercionVariableAggrandizement</string>
+										<key>CoercionItemClass</key>
+										<string>WFGenericFileContentItem</string>
+									</dict>
+									<dict>
+										<key>PropertyUserInfo</key>
+										<dict/>
+										<key>Type</key>
+										<string>WFPropertyVariableAggrandizement</string>
+										<key>PropertyName</key>
+										<string>File Path</string>
+									</dict>
+								</array>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+
+				<key>RunAsRoot</key>
+				<false/>
+			</dict>
+		</dict>
+	</array>
+	<key>WFWorkflowID</key>
+	<string>7FEFAD44-57B0-4F9B-84A1-5955B9136B9E</string>
+	<key>WFWorkflowName</key>
+	<string>{NAME}</string>
+	<key>WFWorkflowSubtitle</key>
+	<string>1 action</string>
+	<key>WFWorkflowClientVersion</key>
+	<string>3612.0.2.3</string>
+	<key>WFWorkflowMinimumClientVersion</key>
+	<!-- <string>1113</string> -->
+	<integer>1113</integer> 
+
+	<key>WFWorkflowInputContentItemClasses</key>
+	<array>
+		<!-- <string>WFAppContentItem</string> -->
+		<string>WFGenericFileContentItem</string>
+		<string>WFFolderContentItem</string>
+	</array>
+<!-- MW -->
+	<key>WFQuickActionSurfaces</key>
+	<array>
+		<string>Services</string>
+		<string>Finder</string>
+        <!-- 
+		<string>finder</string>
+		<string>QuickActionFinder</string>
+		<string>ServicesMenu</string>
+		-->
+	</array>
+
+    <key>WFWorkflowTypes</key>
+    <array>
+        <string>QuickActions</string>
+        <string>ActionExtension</string>
+        <!-- 
+        <string>ActionExtension</string>
+		<string>WFWorkflowTypeReceivesInputFromSearch</string>
+		<string>WFWorkflowTypeShowInSearch</string>
+		-->
+    </array>
+<!-- MW -->
+
+	<key>WFWorkflowOutputContentItemClasses</key>
+	<array/> 
+	<key>WFWorkflowNoInputBehavior</key>
+	<dict>
+		<key>Name</key>
+		<string>WFWorkflowNoInputBehaviorAskForInput</string>
+		<key>Parameters</key>
+		<dict>
+			<key>ItemClass</key>
+			<string>WFGenericFileContentItem</string>
+			<key>SerializedParameters</key>
+			<dict>
+				<key>SelectMultiple</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>ExtensionInput</string>
+						<key>Aggrandizements</key>
+						<array>
+							<dict>
+								<key>Type</key>
+								<string>WFCoercionVariableAggrandizement</string>
+								<key>CoercionItemClass</key>
+								<string>WFFolderContentItem</string>
+							</dict>
+							<dict>
+								<key>PropertyUserInfo</key>
+								<dict/>
+								<key>Type</key>
+								<string>WFPropertyVariableAggrandizement</string>
+								<key>PropertyName</key>
+								<string>File Path</string>
+							</dict>
+						</array>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFPickingMode</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>ExtensionInput</string>
+						<key>Aggrandizements</key>
+						<array>
+							<dict>
+								<key>Type</key>
+								<string>WFCoercionVariableAggrandizement</string>
+								<key>CoercionItemClass</key>
+								<string>WFGenericFileContentItem</string>
+							</dict>
+							<dict>
+								<key>PropertyUserInfo</key>
+								<dict/>
+								<key>Type</key>
+								<string>WFPropertyVariableAggrandizement</string>
+								<key>PropertyName</key>
+								<string>File Path</string>
+							</dict>
+						</array>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>WFWorkflowAssociatedAppBundleIdentifier</key>
+	<string>com.apple.Terminal</string>
+	<key>WFWorkflowSource</key>
+	<string>ShortcutSourceFilePersonal</string>
+	<key>WFWorkflowIcon</key>
+	<dict>
+		<key>WFWorkflowIconGlyphNumber</key>
+		<integer>61440</integer>
+		<key>WFWorkflowIconStartColor</key>
+		<integer>-314141441</integer>
+	</dict>
+</dict>
+</plist>

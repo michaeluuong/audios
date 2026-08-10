@@ -1,5 +1,5 @@
 # 1. Define variables
-NAME="show-tags"
+NAME="test-show-tags"
 SERVICEDIR="$HOME/Library/Services"
 WORKFLOWPATH="$SERVICEDIR/$NAME.workflow"
 CONTENTS="$WORKFLOWPATH/Contents"
@@ -216,6 +216,6 @@ cat << EOF > "$CONTENTS/Info.plist"
 EOF
 
 # 5. Register the service with the system
-/System/Library/CoreServices/RawCameraPartialSupport.appex/../../../../usr/bin/killall Finder 2>/dev/null
-/usr/bin/osascript -e 'tell application "Finder" to restart' 2>/dev/null
+## MW /System/Library/CoreServices/RawCameraPartialSupport.appex/../../../../usr/bin/killall Finder 2>/dev/null
+## MW /usr/bin/osascript -e 'tell application "Finder" to restart' 2>/dev/null
 

@@ -94,13 +94,18 @@ func PrintTags(dir string, outFilenameOpt ...string) error {
 
 	var writer io.Writer = os.Stdout
 	if len(outFilenameOpt) > 0 && outFilenameOpt[0] != "" {
-		if outFilenameOpt[0] == "window" {
-			showActions := false
-			if len(outFilenameOpt) > 1 && outFilenameOpt[1] == "true" {
+		//if outFilenameOpt[0] == "window" {
+		if slices.Contains(outFilenameOpt, "window") {
+			showActions, hasCompleted := false, false
+			if slices.Contains(outFilenameOpt, "showActions") {
 				showActions = true
 
 			}
-			showActions = true
+
+			if slices.Contains(outFilenameOpt, "completed") {
+				hasCompleted = true
+
+			}
 
 			artFiles := filing.LsEntryName(dir, ".*\\.(jpg|png|gif)", "add_dir")
 			if img == nil && len(artFiles) > 0 {
@@ -121,7 +126,7 @@ func PrintTags(dir string, outFilenameOpt ...string) error {
 			}
 
 			winman := aud_io.GetWinmanInstance()
-			winman.TagTableShow(dir, data, cImg, showActions)
+			winman.TagTableShow(dir, data, cImg, showActions, hasCompleted)
 
 			return nil
 
@@ -248,7 +253,7 @@ func PrintArchiveTags(ctx context.Context, filePath string, outFilenameOpt ...st
 			}
 
 			winman := aud_io.GetWinmanInstance()
-			winman.TagTableShow(filePath, data, *cImg, showActions)
+			winman.TagTableShow(filePath, data, *cImg, showActions, false)
 
 			return nil
 

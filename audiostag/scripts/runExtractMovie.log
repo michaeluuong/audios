@@ -1,113 +1,29 @@
-++ dirname /Users/irenepiechota-wong/DEV/GO/audios/audiostag/SCRIPTS
-+ PROG_DIR=/Users/irenepiechota-wong/DEV/GO/audios/audiostag
+++ dirname /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/SCRIPTS
++ PROG_DIR=/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag
 ++ pwd
-+ PWD=/Users/irenepiechota-wong/DEV/GO/audios/audiostag/SCRIPTS
-+ echo 'args: /Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM.tar'
-args: /Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM.tar
-+ TAR_FILE=/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM.tar
-+ /Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiostag --path /Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM.tar --extract
-2026/08/06 11:09:05 INFO found config file from user config directory userConfigFile="/Users/irenepiechota-wong/Library/Application Support/audiostag/config/slog_cfg.json"
-2026/08/06 11:09:05 INFO FindConfigFile() EnvVar="" DefaultConfigFilename=slog_cfg.json cFile="/Users/irenepiechota-wong/Library/Application Support/audiostag/config/slog_cfg.json" err=<nil>
-2026/08/06 11:09:05 INFO defining rotator rotator="&{Filename:/Users/irenepiechota-wong/DEV/GO/audios/audiostag/audiostag.log MaxSize:50 MaxAge:30 MaxBackups:30 LocalTime:false Compress:false size:0 file:<nil> mu:{_:{} mu:{state:0 sema:0}} millCh:<nil> startMill:{_:{} done:{_:{} v:0} m:{_:{} mu:{state:0 sema:0}}}}"
++ PWD=/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/SCRIPTS
++ echo 'args: /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana-In_Your_Name_bw_Pray-Web-2026-FKK.tar'
+args: /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana-In_Your_Name_bw_Pray-Web-2026-FKK.tar
++ TAR_FILE=/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana-In_Your_Name_bw_Pray-Web-2026-FKK.tar
++ /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiostag --path /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana-In_Your_Name_bw_Pray-Web-2026-FKK.tar --extract
+2026/08/08 20:31:28 INFO found config file from user config directory userConfigFile="/Users/irenepiechota-wong/Library/Application Support/audiostag/config/slog_cfg.json"
+2026/08/08 20:31:28 INFO FindConfigFile() EnvVar="" DefaultConfigFilename=slog_cfg.json cFile="/Users/irenepiechota-wong/Library/Application Support/audiostag/config/slog_cfg.json" err=<nil>
+2026/08/08 20:31:28 INFO defining rotator rotator="&{Filename:/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiostag.log MaxSize:50 MaxAge:30 MaxBackups:30 LocalTime:false Compress:false size:0 file:<nil> mu:{_:{} mu:{state:0 sema:0}} millCh:<nil> startMill:{_:{} done:{_:{} v:0} m:{_:{} mu:{state:0 sema:0}}}}"
 Found config file from user config directory, {"userConfigFile":"/Users/irenepiechota-wong/Library/Application Support/audiostag/config/audiostag_cfg.json"}
 FindConfigFile(), {"DefaultConfigFilename":"audiostag_cfg.json","EnvVar":"","cFile":"/Users/irenepiechota-wong/Library/Application Support/audiostag/config/audiostag_cfg.json","err":"\u003cnil\u003e"}
-Parse(), {"pArg":"PflagArgs{preConditionsFlag:\"\", preReplaceFlag:\"\", replaceFlag:\"\", tagFlag:\"\", keepTagFlag:\"\", albumFolderNameFlag:\"\", caseFlag:\"\", coverArtistFlag:\"\", coverAlbumFlag:\"\", coverFlag:\"\", coverSourceFlag:\"\", dirFlag:\"\", extractExcludeFlag:\"\", fileFlag:\"\", multiDiscFlag:\"\", outFlag:\"\", pathFlag:\"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM.tar\", playlistNameFlag:\"\", singleArtistFlag:\"\", variousFlag:\"\", albumFlag:false, dummyFilesFlag:false, extractFlag:true, listFlag:false, noArtistSplit:false, noDirectoryRename:false, playlistFlag:false, printTagsFlag:false, setDefaultTagsFlag:false, showArchiveTagsFlag:false, showTagsFlag:false, testFlag:false, intFlag:0}\n","pflag.Args()":"[]"}
-Pflag, {"dir":"/Users/irenepiechota-wong/Downloads/Movies/","filePath":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM.tar","filename":"Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM.tar"}
+Parse(), {"pArg":"PflagArgs{preConditionsFlag:\"\", preReplaceFlag:\"\", replaceFlag:\"\", tagFlag:\"\", keepTagFlag:\"\", albumFolderNameFlag:\"\", caseFlag:\"\", coverArtistFlag:\"\", coverAlbumFlag:\"\", coverFlag:\"\", coverSourceFlag:\"\", dirFlag:\"\", extractExcludeFlag:\"\", fileFlag:\"\", multiDiscFlag:\"\", outFlag:\"\", pathFlag:\"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana-In_Your_Name_bw_Pray-Web-2026-FKK.tar\", playlistNameFlag:\"\", singleArtistFlag:\"\", variousFlag:\"\", albumFlag:false, dummyFilesFlag:false, extractFlag:true, listFlag:false, noArtistSplit:false, noDirectoryRename:false, playlistFlag:false, printTagsFlag:false, setDefaultTagsFlag:false, showArchiveTagsFlag:false, showTagsFlag:false, createExtractArchiveShortcutFlag:false, createShowTagsShortcutFlag:false, testFlag:false, intFlag:0}\n","pflag.Args()":"[]"}
+Pflag, {"dir":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/","filePath":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana-In_Your_Name_bw_Pray-Web-2026-FKK.tar","filename":"Vana-In_Your_Name_bw_Pray-Web-2026-FKK.tar"}
 
 ----------------------------------------------------------------------------------------------------------------------------------
---extract|-e extracting files from archive, {"dir":"/Users/irenepiechota-wong/Downloads/Movies/","filename":"Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM.tar"}
-Winman.Run()|running func
-Winman.Run()|run
+--extract|-e extracting files from archive, {"dir":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/","filename":"Vana-In_Your_Name_bw_Pray-Web-2026-FKK.tar"}
 
 
 ----------------------------------------------------------------------------------------------
-Extracting archive /Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM.tar, dir: /Users/irenepiechota-wong/Downloads/Movies/, fileanme: Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM.tar
+Extracting archive /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana-In_Your_Name_bw_Pray-Web-2026-FKK.tar, dir: /Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/, fileanme: Vana-In_Your_Name_bw_Pray-Web-2026-FKK.tar
 Archive format identified, {"format.Extension":".tar","format.MediaType()":"application/x-tar"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/Sample/gram-half.baked.totally.high.2024.1080p.bluray.x264-sample.mkv"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r00"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r01"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r02"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r03"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r04"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r05"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r06"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r07"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r08"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r09"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r10"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r11"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r12"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r13"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r14"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r15"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r16"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r17"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r18"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r19"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r20"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r21"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r22"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r23"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r24"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r25"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r26"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r27"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r28"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r29"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r30"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r31"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r32"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r33"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r34"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r35"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r36"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r37"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r38"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r39"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r40"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r41"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r42"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r43"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r44"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r45"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r46"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r47"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r48"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r49"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r50"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r51"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r52"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r53"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r54"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r55"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r56"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r57"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r58"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r59"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r60"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r61"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r62"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r63"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r64"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r65"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r66"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r67"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r68"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r69"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r70"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r71"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r72"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r73"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r74"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r75"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r76"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r77"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r78"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r79"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r80"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r81"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.r82"}
-Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/Downloads/Movies/Half.Baked.Totally.High.2024.1080p.BluRay.x264-GRAM/gram-half.baked.totally.high.2024.1080p.bluray.x264.rar"}
-Winman.Run()|done
+Renaming file, {"strRe":".*proof.*","target":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana-In_Your_Name_bw_Pray-Web-2026-FKK/cover.jpg"}
+Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana-In_Your_Name_bw_Pray-Web-2026-FKK/cover.jpg"}
+Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana-In_Your_Name_bw_Pray-Web-2026-FKK/01-vana-in_your_name-fkk.mp3"}
+Extracting file, {"permissions":"-rw-r--r--","target":"/Users/irenepiechota-wong/DEV/GO/michaeluuong/audios/audiostag/audiofiles/Vana-In_Your_Name_bw_Pray-Web-2026-FKK/02-vana-pray-fkk.mp3"}
 + echo done
 done

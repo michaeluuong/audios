@@ -5,7 +5,7 @@ import (
 
 	archiver "github.com/michaeluuong/audios/audiostag/internal/app/core/archiver/config"
 	mp3Config "github.com/michaeluuong/audios/audiostag/internal/app/core/mp3/config"
-	"github.com/michaeluuong/audios/audiostag/internal/pkg/config"
+	"github.com/michaeluuong/config"
 	"github.com/michaeluuong/utilize/reflections"
 )
 

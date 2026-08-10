@@ -422,14 +422,7 @@ func ExtractArchives(ctx context.Context, dir string, filenameRegexOpt ...string
 	}
 
 	archiveDirList := filing.LsEntryName(dir, filenameRegex, "add_dir")
-	if err != nil {
-		return err
-
-	}
-
 	extractConcurrent := archConfig.ExtractConcurrent
-	slog.Debug("routine.NewSemaphore()|config", "extractConcurrent", extractConcurrent)
-
 	sem := routine.NewSemaphore(extractConcurrent)
 	var wg sync.WaitGroup
 	var mu sync.Mutex
