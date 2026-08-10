@@ -19,6 +19,7 @@ audiostag provides the ability to create two Shortcuts but I've provided instruc
 In an unfortunate outcome of the wasted investment of time, I could not figure out how to programmatically add items to the Finder Quick Actions menu.
 You will have to edit the Shortcut manually checking "Finder" under "Use as Quick Action" in the Details tab of the "Shortcut Details" section, or 
 use audiostag to add the same Shortcut twice (replacing the original) which will magically check the Finder box.
+The created Shortcut will point to the location that you've placed the audiostag binary.
 
 <img width="862" height="610" alt="image" src="https://github.com/user-attachments/assets/62837c82-7bb9-4dd7-8dc3-72ec55770a3f" />
 
