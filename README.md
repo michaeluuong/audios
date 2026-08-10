@@ -131,7 +131,12 @@ Upon first use you will have allow audiostag to run in Privacy settings where I 
 }
 ```
 - Most tag changes can be done any time except for the Album name which needs to be done up front
-    - The only way to change the Album name and have all the directories created correctly is to use a pre-action which changes the tag up front
+    - To properly change the Album name and have all the directories created correctly is to use a pre-action which changes the tag up front
         - Pre Condition
         - Pre Replace
-    - 
+- If the artist names in the Artist tag field are mostly different (i.e. 80%) the album will be considered a various artist album and will move the artist to the title (i.e. {Title} - {Artist})
+  and the Artist field will copy the name of the album
+- You can click on table fields to enter them into the text fields for each action
+- If there is a picture file in the archive or folder it will be added to the picture field of the track
+   - If it's an archive you can exclude the picture from being extracted and choosing the "Exclude File" action (e.g. Exclude File .*\.jpg)
+- Characters within regular expressions that shouldn't be considered part of the expression should be escaped with a single backslash
