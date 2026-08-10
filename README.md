@@ -1,24 +1,24 @@
 # audios 
-Provides popularly unused applications for audio and visuals. 
+Provides popularly unused applications for audio and bit of visuals. 
 ## audiostag
-The sole audios provision that aims to exist just shy of a universal tagging automaton; but relegated to insurecting years of manual tagging.
-Built on a foundation of OS independence, born out a a macOS necessity and has not been tested anywhere else.  
+The sole audios provision that aims to exist as a universal tagging automaton, but relegated to insurecting manual taggage.
+Built on a foundation of OS independence but birthed for the mac; both quality and assurance has been aborted for non Darwin operating systems.  
 While it is possible to modify tags on single files (with the proper regular expressions and action choices) this was meant to tag full albums.
 
 ## go build -o audiostag cmd/main.go
-You can name it whatever you want, but if consistency is important you'll also need to code out the nasty little dependencies that surely exist.
+You can name it whatever you want, but if consistency is important you'll also need to code out the annoying little dependencies that I've neglected to account for.
 
 This can be used as a command line interface but it's use was always predicated on being a right-click action
 - macOS Quick Action
-- Windows context menu (not yet supported)
+- Windows context menu (not added to regular programming)
 
 ## macOS Quick Action Shortcuts
-audiostag provides the ability to create two Shortcuts but I've provided instructions to create whatever actions you need manually.
+audiostag provides the ability to create two Shortcuts but instructions are provided for manual creation.
 <img width="637" height="457" alt="image" src="https://github.com/user-attachments/assets/10958236-b770-48eb-9c6d-3667019b9682" />
 
-In an unfortunate outcome of the wasted investment of time, I could not figure out how to programmatically add items to the Finder Quick Actions menu.
-You will have to edit the Shortcut manually checking "Finder" under "Use as Quick Action" in the Details tab of the "Shortcut Details" section, or 
-use audiostag to add the same Shortcut twice (replacing the original) which will magically check the Finder box.
+In an unfortunate outcome of wasted time investment, I could not figure out how to programmatically add items to the Finder Quick Actions menu.
+The Shortcut will either need to be manually edited to check "Finder" under "Use as Quick Action" in the Details tab of the "Shortcut Details" section, or 
+use audiostag to add the same Shortcut twice (replacing the original) which magically checks the Finder box (at least for me it does).
 The created Shortcut will point to the location that you've placed the audiostag binary.
 
 <img width="862" height="610" alt="image" src="https://github.com/user-attachments/assets/62837c82-7bb9-4dd7-8dc3-72ec55770a3f" />
@@ -141,3 +141,76 @@ Upon first use you will have allow audiostag to run in Privacy settings where I 
 - If there is a picture file in the archive or folder it will be added to the picture field of the track
    - If it's an archive you can exclude the picture from being extracted and choosing the "Exclude File" action (e.g. Exclude File .*\.jpg)
 - Characters within regular expressions that shouldn't be considered part of the expression should be escaped with a single backslash
+
+# audiostag actions
+- Album Folder (album-folder-name)
+   - use this "folder name" to name the album folder (i.e. directory immediately enclosing album)
+- Cover Album (--cover-album_
+   - search musicbrainz with this album name (instead of whats in the album tag)
+- Cover Artist (--cover-artist)
+   - search musicbrainz with this artist name (instead of whats in the artist tag)
+- Dummy Files (--dummy-files)
+   - creates empty mp3 files, copies the tags, and archives
+- Exclude File (--extract-exclude)
+   - do not extract this file or file(s) matching this regular expression
+      - characters in the regular expression that match regular expression characters need to be escaped e.g. ".*\.jpg"
+- Keep Tag (--keep-tag)
+   - leave this tag in the file because audiostag automatically removes non-required tags 
+- Playlist Name (--playlist-name)
+   - name the playlist file 
+- Precondition (--precondition)
+   - at the beginning of the process, if the "source tag" matches this "regex", set the "destination tag" to the "match value" otherwise set it to the "else value"
+   - the Album tag can be set here
+   - hides the only non-intuitive/secret expression in audiostag
+      - 
+- Prereplace
+   - at the beginning of the process, if the "tag" matches the "regex" set it to the "replace value"
+   - the Album tag can be set here 
+- Single Artist (--single-artist)
+   - treat this album as a single artist album (i.e. if audiostag has incorrectly determined that the album is a "Various Artist" album, correct it)
+- Tag (--tag)
+   - set the "source tag" to TRCK and provide a range (e.g. 1-10) and set the "destination tag" to the "match value" else "else value"
+      - helpful despite being tedious to set the disc number
+- Various Artists (--various)
+   - treat this album as a "Various Artists" album (i.e. if audiostag has incorrectly determined that the album is a "Single Artist" album, correct it)
+
+
+# audiostag CLI flags
+- --precondition
+- --prereplace
+- --replace|-r
+- --tag|-t
+- --keep-tag|-k
+
+- --dir|-d
+- --extract-exclude
+- --file|-f
+- --out|-o
+- --path|-p
+  
+- --album-folder-name
+- --case
+- --cover-album
+- --cover-artist
+- --cover
+- --cover-source|-c
+- --multi-disc
+- --playlist-name
+- --single-artist
+- --various
+
+- --album
+- --dummy-files
+- --extract|-e
+- --list|-l
+- --no-artist-split
+- --no-directory-rename
+- --playlist
+- --print-tags
+- --set-default-tags|-s
+- --show-archive-tags
+- --show-tags
+- --show-tags-chooser
+
+- --create-extract-archive-shortcut
+- --create-show-tags-shortcut
